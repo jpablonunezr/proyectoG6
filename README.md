@@ -2,7 +2,7 @@
 *proyecto g6*
 
 
- |  	
+ Integrantes |  	
 ------------ | -------------
-Pablo| Nunez
-Alejandra | Diaz
+PabloNunez| 
+AlejandraDiaz| 
