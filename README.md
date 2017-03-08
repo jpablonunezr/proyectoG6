@@ -1,4 +1,4 @@
-# TEACHUB <h1> tag
+# TEACHUB <h1>
 *proyecto g6 teachub desafiolatam 2k17*
 
 
