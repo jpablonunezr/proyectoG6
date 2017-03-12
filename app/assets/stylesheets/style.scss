@@ -17,6 +17,75 @@ input{
 	outline: none;
 }
 
+
+/***NAV***/
+
+nav{
+	position:fixed;
+	top:0;
+	right:0;
+	width:15vw;
+	min-width:300px;
+	background:#fff;
+	height:100%;
+	z-index: 2;
+	box-sizing:border-box;
+	padding:30px;
+
+	.acc{
+		width:100%;
+
+
+		.img-profile{
+			position:relative;
+			margin:0 auto;
+			width: 150px;
+			height:150px;
+			background:url('default.png') no-repeat center/cover #ccc;
+			border-radius:100%;
+		}
+
+		h4{
+			font-size:22px;
+			text-align:center;
+			text-transform:capitalize;
+			margin:20px 0 5px 0;
+			color:$text-dark;
+			font-weight:bold;
+			letter-spacing:1px;
+		}
+
+		h5{
+			font-size:14px;
+			text-align:center;
+			margin:0 0 20px 0;			
+		}
+
+	}
+
+	.logout{
+		position:absolute;
+		bottom:100px;
+		width:100px;
+		text-align:center;
+		left:calc(50% - 50px);
+
+	}
+
+	.copy-right{
+		position:absolute;
+		bottom:0;
+		left:0;
+		width:100%;
+		padding:20px 40px;
+		text-align:center;
+		box-sizing:border-box;
+		font-size:12px;
+	}
+
+}
+
+
 /** LOGIN****/
 
 .user-login{
@@ -26,14 +95,15 @@ input{
 	width: 40vw;
 	height: 100vh;
 	background: $gray-lighter;
+	z-index: 3;
 
 	.cont-login{
 
 		position:absolute;
 		width: 380px;
-		height:300px;
-		top:calc(50% - 150px);
-		left:calc(50% - 190px);
+		height:360px;
+		top:calc(50% - 200px);
+		left:calc(50% - 180px);
 
 
 		input{
@@ -86,6 +156,11 @@ input{
 			transition:$transition-2;			
 			box-shadow:0 0px 6px 0 rgba(0,0,0,0);
 			display:inline-block;
+			font-weight:bold;
+		}
+
+		button:focus{
+			background-color:$main-dark;
 		}
 
 		span{
@@ -116,8 +191,8 @@ input{
 			right:0;
 			text-align:right;
 			font-size:14px;
-			margin:-37px 0 37px 200px;
-			width:200px;
+			margin:-37px 0 40px 200px;
+			width:180px;
 			display:block;
 
 		}
@@ -138,5 +213,45 @@ input{
 	width: 60vw;
 	height: 100vh;
 	background: url('teach.jpg') no-repeat right bottom/cover #fff;
+	z-index: 3;
+
+}
+
+
+
+
+/*** MATERIALS***/
+
+
+main{
+	position:absolute;
+	left:0;
+	width:85vw;
+	box-sizing:border-box;
+	padding:100px 0;
+
+	section.material{
+		position:relative;
+		margin:0 auto;
+		width: 70%;
+
+		h1{
+			color:$text-dark;
+			margin: 0 0 20px 0;
+		}
+
+
+		.cont-material{
+			width:100%;			
+			background:#fff;
+			border-radius:10px;
+			min-height: 300px;
+			margin: 0 0 100px 0;			
+			box-shadow:0 7px 10px 3px rgba(0,0,0,.15),
+					   0 1px 4px -2px rgba(0,0,0,.4);
+		}
+
+	}
+
 
 }
