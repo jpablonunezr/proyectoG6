@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170310205314) do
+ActiveRecord::Schema.define(version: 20170312040125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "alternatives", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "question_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["question_id"], name: "index_alternatives_on_question_id", using: :btree
+  end
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "user_material_id"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.index ["user_material_id"], name: "index_comments_on_user_material_id", using: :btree
+  end
 
   create_table "levels", force: :cascade do |t|
     t.string   "name"
@@ -22,12 +38,13 @@ ActiveRecord::Schema.define(version: 20170310205314) do
   end
 
   create_table "materials", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
     t.string   "title"
     t.text     "description"
-    t.integer  "user_id"
-    t.index ["user_id"], name: "index_materials_on_user_id", using: :btree
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.integer  "updated_by"
+    t.integer  "public_level"
+    t.integer  "owner"
   end
 
   create_table "networks", force: :cascade do |t|
@@ -35,6 +52,15 @@ ActiveRecord::Schema.define(version: 20170310205314) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "questions", force: :cascade do |t|
+    t.string   "type"
+    t.text     "content"
+    t.integer  "material_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["material_id"], name: "index_questions_on_material_id", using: :btree
   end
 
   create_table "subjects", force: :cascade do |t|
@@ -50,6 +76,16 @@ ActiveRecord::Schema.define(version: 20170310205314) do
     t.datetime "updated_at", null: false
     t.index ["level_id"], name: "index_user_levels_on_level_id", using: :btree
     t.index ["user_id"], name: "index_user_levels_on_user_id", using: :btree
+  end
+
+  create_table "user_materials", force: :cascade do |t|
+    t.string   "role"
+    t.integer  "material_id"
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["material_id"], name: "index_user_materials_on_material_id", using: :btree
+    t.index ["user_id"], name: "index_user_materials_on_user_id", using: :btree
   end
 
   create_table "user_networks", force: :cascade do |t|
@@ -83,17 +119,22 @@ ActiveRecord::Schema.define(version: 20170310205314) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name"
     t.string   "photo"
     t.string   "biography"
     t.string   "city"
+    t.string   "first_name"
+    t.string   "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "materials", "users"
+  add_foreign_key "alternatives", "questions"
+  add_foreign_key "comments", "user_materials"
+  add_foreign_key "questions", "materials"
   add_foreign_key "user_levels", "levels"
   add_foreign_key "user_levels", "users"
+  add_foreign_key "user_materials", "materials"
+  add_foreign_key "user_materials", "users"
   add_foreign_key "user_networks", "networks"
   add_foreign_key "user_networks", "users"
   add_foreign_key "user_subjects", "subjects"

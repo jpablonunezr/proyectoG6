@@ -1,4 +1,39 @@
 <p id="notice"><%= notice %></p>
 
+<p>
+  <strong>Title:</strong>
+  <%= @material.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @material.description %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @material.created_at %>
+</p>
+
+<p>
+  <strong>Updated at:</strong>
+  <%= @material.updated_at %>
+</p>
+
+<p>
+  <strong>Updated by:</strong>
+  <%= @material.updated_by %>
+</p>
+
+<p>
+  <strong>Public level:</strong>
+  <%= @material.public_level %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @material.owner %>
+</p>
+
 <%= link_to 'Edit', edit_material_path(@material) %> |
 <%= link_to 'Back', materials_path %>

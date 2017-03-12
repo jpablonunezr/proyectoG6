@@ -11,6 +11,41 @@
     </div>
   <% end %>
 
+  <div class="field">
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :created_at %>
+    <%= f.datetime_select :created_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :updated_at %>
+    <%= f.datetime_select :updated_at %>
+  </div>
+
+  <div class="field">
+    <%= f.label :updated_by %>
+    <%= f.number_field :updated_by %>
+  </div>
+
+  <div class="field">
+    <%= f.label :public_level %>
+    <%= f.number_field :public_level %>
+  </div>
+
+  <div class="field">
+    <%= f.label :owner %>
+    <%= f.number_field :owner %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
