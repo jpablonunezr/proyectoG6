@@ -4,7 +4,7 @@
 	<nav>
 		<div class="acc">
 			<div class="img-profile"></div>
-			<h4><%= current_user.name %></h4>
+			<h4><%= current_user.first_name %></h4>
 			<h5><%= current_user.city %></h5>
 			<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Cerrar sesión</a>			
 		</div>
