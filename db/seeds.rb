@@ -10,8 +10,8 @@ User.destroy_all
 Level.destroy_all
 Subject.destroy_all
 
-User.create(email:'alejandra@gmail.com', password:'123456', first_name:'alejandra', city:'Santiago')
-User.create(email:'pablo@gmail.com', password:'123456', first_name:'Pablo', city:'Santiago')
+User.create(email:'alejandra@gmail.com', password:'123456', first_name:'alejandra', last_name:'Diaz')
+User.create(email:'pablo@gmail.com', password:'123456', first_name:'Pablo', last_name:'Nuñez')
 
 Level.create(name:'Pre-Kínder')
 Level.create(name:'Kínder')
