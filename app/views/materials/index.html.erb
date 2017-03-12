@@ -1,25 +1,21 @@
 <p id="notice"><%= notice %></p>
+<main> 
+  <section class="material">
+   <h1>Mis Materiales</h1> 
+   <div class="cont-material">
 
-<h1>Materials</h1>
+   </div>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+ </section>
 
-  <tbody>
-    <% @materials.each do |material| %>
-      <tr>
-        <td><%= link_to 'Show', material %></td>
-        <td><%= link_to 'Edit', edit_material_path(material) %></td>
-        <td><%= link_to 'Destroy', material, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
+ <section class="material">
+  <h1>Mis Colaboraciones</h1>
+  <div class="cont-material">
+
+  </div>
+
+</section>
 
 <%= link_to 'New Material', new_material_path %>
+</main> 

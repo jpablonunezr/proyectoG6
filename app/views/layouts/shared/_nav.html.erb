@@ -3,10 +3,13 @@
 	<% if user_signed_in? %>
 	<nav>
 		<div class="acc">
+			<div class="img-profile"></div>
 			<h4><%= current_user.name %></h4>
-			<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Salir</a>
-			<div class="img-profile"></div>			
-		</div>		
+			<h5><%= current_user.city %></h5>
+			<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Cerrar sesión</a>			
+		</div>
+
+	<p class="copy-right">Todos los derechos reservados.<br>&copy; 2017 Teachub, y teachub.com son marcas registradas.</p>		
 	</nav>
 
 	<% else %>
@@ -14,5 +17,6 @@
 	<nav></nav>
 
 	<% end %>
-</header>
 
+
+</header>
