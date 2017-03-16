@@ -1,1 +1,6 @@
-$('#materials_<%= @material.id %>').addClass('material-destroy')
+$('#materials_<%= @material.id %>').addClass('material-destroy');
+
+setTimeout( function(){
+	$('#materials_<%= @material.id %>').css({'width':'0', 'padding':'0', 'margin':'0'})
+	},300); 
+	

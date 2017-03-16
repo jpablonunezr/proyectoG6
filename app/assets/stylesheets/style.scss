@@ -92,6 +92,15 @@ header{
 
 /** LOGIN****/
 
+.log-main{
+	position:fixed;
+	z-index: 5;
+	top:0;
+	left:0;
+	width:100vw;
+	height:100vh;
+}
+
 .user-login{
 	position: absolute;
 	top: 0;
@@ -265,7 +274,7 @@ main{
 			display:flex;
 			flex-direction: row;
 			flex-wrap: wrap;
-			justify-content:center;
+			justify-content:start;
 			position:relative;
 
 			li:nth-child(1){
@@ -281,6 +290,7 @@ main{
 				margin:0 20px 20px 0;
 				transition:$transition-2;
 				overflow: hidden;
+				word-wrap: break-word;
 			}
 		}
 
@@ -300,6 +310,8 @@ main{
 		transform:translate(0, -70px);
 	}
 
+
+
 }
 
 .btn-round{
@@ -312,5 +324,4 @@ main{
 	box-shadow:$shadow-short;
 	transition:$transition-2;
 }
-
 
