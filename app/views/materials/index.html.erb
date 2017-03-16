@@ -1,17 +1,24 @@
-<main> 
-
   <section class="material">
     <h1>Mis Materiales</h1>
     <div class="cont-material">
+
+      <ul>
+      
+      <li>
+      <% @materials.each do |material| %>
+      <%= render 'materials', material: material %>
+      <% end %>
+      </li>
+      </ul>
+
     </div>
   </section>
 
-  <section class="material">
+  <!-- <section class="material">
     <h1>Mis Colaboraciones</h1>
     <div class="cont-material">
     </div>
 
-  </section>
+  </section> -->
 
-  <%= link_to 'New Material', new_material_path %>
-</main> 
+  <%= link_to '', new_material_path, class:'btn-round btn-new' %>

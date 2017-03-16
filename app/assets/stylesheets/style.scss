@@ -1,4 +1,4 @@
-@import 'colors.scss';
+@import 'var.scss';
 
 body{
 	background-color:$gray;
@@ -8,9 +8,12 @@ body{
 
 }
 
-a{
-	text-decoration: none;
-}
+
+::selection{ background:$main; color:#fff;}
+::-moz-selection {background:$main; color:#fff;}
+
+
+a{text-decoration: none;}
 
 input{
 	border:0;
@@ -20,17 +23,18 @@ input{
 
 /***NAV***/
 
-nav{
+header{
 	position:fixed;
 	top:0;
-	right:0;
-	width:15vw;
+	left:0;
+	width:15%;
 	min-width:300px;
 	background:#fff;
 	height:100%;
 	z-index: 2;
-	box-sizing:border-box;
+	box-sizing: border-box;
 	padding:30px;
+	margin:0;
 
 	.acc{
 		width:100%;
@@ -77,10 +81,10 @@ nav{
 		bottom:0;
 		left:0;
 		width:100%;
-		padding:20px 40px;
+		padding:20px 60px;
 		text-align:center;
 		box-sizing:border-box;
-		font-size:12px;
+		font-size:10px;
 	}
 
 }
@@ -125,7 +129,7 @@ nav{
 			transform:translate(-2px);
 			transform:scale(1.05);
 			box-shadow:0 3px 6px 0 rgba(0,0,0,.15),
-					   0 1px 3px -1px rgba(0,0,0,.3);
+			0 1px 3px -1px rgba(0,0,0,.3);
 
 		}
 
@@ -197,7 +201,7 @@ nav{
 
 		}
 
-	
+
 
 	}
 
@@ -223,17 +227,31 @@ nav{
 /*** MATERIALS***/
 
 
+
 main{
 	position:absolute;
-	left:0;
-	width:85vw;
-	box-sizing:border-box;
+	left:15%;
+	width:85%;
+	min-width:calc(100% - 300px);
+	box-sizing: border-box;
 	padding:100px 0;
+	margin:0;
 
-	section.material{
+	.cont-main{
 		position:relative;
 		margin:0 auto;
-		width: 70%;
+		width: 80%;
+		background:#fff;
+		border-radius:10px;
+		min-height: 300px;			
+		box-shadow:$shadow;
+		padding:50px;
+		box-sizing:border-box;
+
+	}
+
+	section.material{
+		margin: 0 0 100px 0;
 
 		h1{
 			color:$text-dark;
@@ -241,17 +259,58 @@ main{
 		}
 
 
-		.cont-material{
-			width:100%;			
-			background:#fff;
-			border-radius:10px;
-			min-height: 300px;
-			margin: 0 0 100px 0;			
-			box-shadow:0 7px 10px 3px rgba(0,0,0,.15),
-					   0 1px 4px -2px rgba(0,0,0,.4);
+
+		ul{
+
+			display:flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content:center;
+			position:relative;
+
+			li:nth-child(1){
+				display:none;
+			}
+
+			li{
+				border:1px solid red;
+				padding:20px;
+				box-sizing:border-box;
+				width:calc(100% / 5 - 20px);
+				height:200px;
+				margin:0 20px 20px 0;
+				transition:$transition-2;
+				overflow: hidden;
+			}
 		}
+
 
 	}
 
 
+
+	.btn-new{background:url('add.svg') no-repeat center/20px $main;}
+	.btn-new:hover{
+		background-size:25px;
+		transform:scale(1.2);
+	}
+
+	.material-destroy{
+		opacity:0;
+		transform:translate(0, -70px);
+	}
+
 }
+
+.btn-round{
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	width:60px;
+	height:60px;
+	border-radius:100%;
+	box-shadow:$shadow-short;
+	transition:$transition-2;
+}
+
+
