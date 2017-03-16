@@ -2,7 +2,7 @@
     <h1>Mis Materiales</h1>
     <div class="cont-material">
 
-      <ul>
+      <ul id="sortable">
       
       <li>
       <% @materials.each do |material| %>
@@ -12,10 +12,18 @@
       </ul>
 
     </div>
-    <%= render 'form', material: @material %>
   </section>
 
- 
+<!--   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#sortable" ).sortable({
+      revert: false
+    });
+    $( "ul, li" ).disableSelection();
+  } );
+  </script> -->
+
   <!-- <section class="material">
     <h1>Mis Colaboraciones</h1>
     <div class="cont-material">

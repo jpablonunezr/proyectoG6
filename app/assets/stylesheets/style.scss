@@ -243,18 +243,18 @@ main{
 	width:85%;
 	min-width:calc(100% - 300px);
 	box-sizing: border-box;
-	padding:100px 0;
+	padding:50px 0;
 	margin:0;
 
 	.cont-main{
 		position:relative;
 		margin:0 auto;
 		width: 80%;
-		background:#fff;
+		//background:#fff;
 		border-radius:10px;
 		min-height: 300px;			
-		box-shadow:$shadow;
-		padding:50px;
+		//box-shadow:$shadow;
+		//padding:50px;
 		box-sizing:border-box;
 
 	}
@@ -265,36 +265,93 @@ main{
 		h1{
 			color:$text-dark;
 			margin: 0 0 20px 0;
+			font-size: 25px;
+			font-weight:300;
 		}
 
 
 
 		ul{
 
-			display:flex;
-			flex-direction: row;
-			flex-wrap: wrap;
-			justify-content:start;
+			// display:flex;
+			// flex-direction: row;
+			// flex-wrap: wrap;
+			// justify-content:flex-start;
+			// align-items: flex-start;
+			// align-content: flex-start;
 			position:relative;
+			min-height:auto;
 
 			li:nth-child(1){
 				display:none;
 			}
 
-			li{
-				border:1px solid red;
-				padding:20px;
+			/*li::after{
+			content:counter(li);			
+   			color:$text-light;
+   			position:absolute;
+   			font-size: 11px;
+   			left:7px;
+   			top:7px;
+   			}*/
+
+   			li{
+   				padding:25px;
+				//counter-increment:li;
+				background:#fff;
+				box-shadow:$shadow-soft;
 				box-sizing:border-box;
-				width:calc(100% / 5 - 20px);
+				width:calc(100% / 5 - 30px);
 				height:200px;
-				margin:0 20px 20px 0;
+				margin:0 30px 30px 0;
 				transition:$transition-2;
 				overflow: hidden;
 				word-wrap: break-word;
+				float: left;
+				border-radius:5px;
+				position:relative;
+				cursor: pointer;
+
+
+				h2{
+					font-weight:bold;
+					text-transform:capitalize;
+					color:$text-dark;
+					font-size: 25px;
+					line-height:22px;
+				}
+
+				p{
+					font-size: 14px;
+				}
+
+				.material-subject{
+					position:absolute;
+					bottom:10px;
+					right:10px;
+					font-size:9px;
+					font-weight:bold;
+					text-transform:uppercase;
+					color:#fff;
+					padding:5px;
+					background:#999;
+					border-radius:3px;
+
+				}
+
 			}
 		}
 
 
+	}
+
+
+	section.material ul:after {
+		visibility: hidden;
+		display: block;
+		content: "";
+		clear: both;
+		height: 0;
 	}
 
 
@@ -307,7 +364,25 @@ main{
 
 	.material-destroy{
 		opacity:0;
-		transform:translate(0, -70px);
+		transform:translate(0, 30px);
+	}
+
+	.material-delete{
+		position:absolute;
+		right:10px;
+		top:10px;
+		width:20px;
+		height:20px;
+		background:url('close.svg') no-repeat center/10px;
+		transform:translate(5px,0);
+		opacity:0;
+		transition:$transition-2;
+
+	}
+
+	section.material ul li:hover .material-delete{
+		opacity:1;
+		transform:translate(0,0);
 	}
 
 
