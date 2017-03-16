@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170312040125) do
+ActiveRecord::Schema.define(version: 20170316184620) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,10 @@ ActiveRecord::Schema.define(version: 20170312040125) do
     t.integer  "updated_by"
     t.integer  "public_level"
     t.integer  "owner"
+    t.integer  "subject_id"
+    t.integer  "level_id"
+    t.index ["level_id"], name: "index_materials_on_level_id", using: :btree
+    t.index ["subject_id"], name: "index_materials_on_subject_id", using: :btree
   end
 
   create_table "networks", force: :cascade do |t|
@@ -119,6 +123,9 @@ ActiveRecord::Schema.define(version: 20170312040125) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "photo"
+    t.string   "biography"
+    t.string   "city"
     t.string   "first_name"
     t.string   "last_name"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
@@ -127,6 +134,8 @@ ActiveRecord::Schema.define(version: 20170312040125) do
 
   add_foreign_key "alternatives", "questions"
   add_foreign_key "comments", "user_materials"
+  add_foreign_key "materials", "levels"
+  add_foreign_key "materials", "subjects"
   add_foreign_key "questions", "materials"
   add_foreign_key "user_levels", "levels"
   add_foreign_key "user_levels", "users"

@@ -5,7 +5,7 @@ class MaterialsController < ApplicationController
   # GET /materials.json
   def index
     @materials= Material.all.reverse
-    @material=Material.new
+    @material= Material.new
   end
 
   # GET /materials/1
@@ -75,6 +75,6 @@ class MaterialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def material_params
-      params.require(:material).permit(:title, :description, :created_at, :updated_at, :updated_by, :public_level, :owner)
+      params.require(:material).permit(:title, :description, :created_at, :updated_at, :updated_by, :public_level, :owner, :level_id, :subject_id, :questions_attributes)
     end
 end

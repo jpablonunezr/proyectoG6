@@ -27,10 +27,25 @@
   </div>
 
   <div class="field">
+    <%= f.label :subject %>
+    <%= f.collection_select :subject_id, Subject.all, :id, :name %>
+    <!-- Creditos a Mauro  -->
+  </div>
+
+  <div class="field">
+    <%= f.label :level %>
+    <%= f.collection_select :level_id, Level.all, :id, :name %>
+  </div>
+
+<!--   <div class="field">
     <%= f.label :owner %>
     <%= f.number_field :owner %>
   </div>
-
+ -->
+  
+  <%= f.fields_for :questions do |builder| %>
+      <%= render 'question_fields', f: builder %>
+  <% end %>
   
     <%= f.submit %>
 
