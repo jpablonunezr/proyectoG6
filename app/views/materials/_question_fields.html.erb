@@ -1,0 +1,9 @@
+<fieldset>
+  <%= f.label :content, "Pregunta" %> <br />
+  <%= f.text_area :content %> <br />
+  <%= f.check_box :_destroy %>
+  <%= f.label :_destroy, "Eliminar" %>
+  <%= f.fields_for :alternatives do |builder| %>
+      <%= render 'alternative_fields', f: builder %>
+  <% end %>
+</fieldset>
