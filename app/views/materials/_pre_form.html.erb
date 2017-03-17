@@ -12,13 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.text_field :title, placeholder:'Titulos' %>
+    <%= f.text_field :title, placeholder:'Títulos' %>
   </div>
 
   <div class="field">
     <%= f.label :description %>
-    <%= f.text_area :description, placeholder:'Description', maxlength:50 %>
+    <%= f.text_area :description, placeholder:'Descripción', maxlength:50 %>
   </div>
+
   
   <div class="field">
     <%= f.label :public_level %>
@@ -28,7 +29,7 @@
   <div class="field">
     <%= f.label :subject %>
     <%= f.collection_select :subject_id, Subject.all, :id, :name %>
-    <!-- Creditos a Mauro :)  -->
+    <!-- Creditos a Mauro  -->
   </div>
 
   <div class="field">
@@ -36,18 +37,6 @@
     <%= f.collection_select :level_id, Level.all, :id, :name %>
   </div>
 
-<!--   <div class="field">
-    <%= f.label :owner %>
-    <%= f.number_field :owner %>
-  </div>
- -->
-  
-  <%= f.fields_for :questions do |builder| %>
-      <%= render 'question_fields', f: builder %>
-  <% end %>
-  <div class="links">
-    <%= link_to_add_association "Agregar Pregunta", f, :questions %>
-  </div> 
 
     <%= f.submit %>
 
