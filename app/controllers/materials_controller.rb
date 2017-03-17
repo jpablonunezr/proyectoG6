@@ -44,14 +44,15 @@ class MaterialsController < ApplicationController
   # PATCH/PUT /materials/1.json
   def update
     respond_to do |format|
-      if @material.update(material_params)
+      if @material.update_attributes(material_params)
         format.html { redirect_to @material, notice: 'Material was successfully updated.' }
         format.json { render :show, status: :ok, location: @material }
         format.js
       else
-        format.html { render :edit }
-        format.json { render json: @material.errors, status: :unprocessable_entity }
-        format.js
+        # format.html { render :edit }
+        # format.json { render json: @material.errors, status: :unprocessable_entity }
+        # format.js
+        render :edit
       end
     end
   end
@@ -75,6 +76,6 @@ class MaterialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def material_params
-      params.require(:material).permit(:title, :description, :created_at, :updated_at, :updated_by, :public_level, :owner, :level_id, :subject_id, :questions_attributes)
+      params.require(:material).permit(:title, :description, :created_at, :updated_at, :updated_by, :public_level, :owner, :level_id, :subject_id, questions_attributes: [:content, :_destroy])
     end
 end
