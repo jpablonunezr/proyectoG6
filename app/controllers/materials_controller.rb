@@ -31,7 +31,6 @@ class MaterialsController < ApplicationController
   # POST /materials.json
   def create
     @material = Material.new(material_params)
-
     respond_to do |format|
       if @material.save
         format.html { redirect_to edit_material_path(@material), notice: 'Material was successfully created.' }

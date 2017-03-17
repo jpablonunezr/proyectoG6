@@ -38,7 +38,6 @@ Subject.create!(name:'Química')
 Subject.create!(name:'Psicología')
 Subject.create!(name:'Ingles')
 Subject.create!(name:'Religión')
-Subject.create!(name:'Lenguaje')
 
 11.times do |i|
 	Material.create!(title:"Proyecto #{i}",

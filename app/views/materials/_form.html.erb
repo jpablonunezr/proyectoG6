@@ -22,8 +22,12 @@
 
   
   <div class="field">
-    <%= f.label :public_level %>
-    <%= f.number_field :public_level %>
+    <%= f.label :public_level, "Privacidad" %>
+    <%= f.select(:public_level) do %>
+      <% [['Privado', 0], ['Publico', 1]].each do |c| %>
+        <%= content_tag(:option, c.first, value: c.last) %>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="field">
@@ -36,20 +40,13 @@
     <%= f.label :level %>
     <%= f.collection_select :level_id, Level.all, :id, :name %>
   </div>
-
-<!--   <div class="field">
-    <%= f.label :owner %>
-    <%= f.number_field :owner %>
-  </div>
- -->
   
   <%= f.fields_for :questions do |builder| %>
-      <%= render 'question_fields', f: builder %>
+    <%= render 'question_fields', f: builder %>
   <% end %>
-  <div class="links">
-    <%= link_to_add_association "Agregar Pregunta", f, :questions %>
-  </div> 
+    <div class="links">
+      <%= link_to_add_association "Agregar Pregunta", f, :questions %>
+    </div> 
 
     <%= f.submit %>
-
 <% end %>
