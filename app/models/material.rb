@@ -5,7 +5,7 @@ class Material < ApplicationRecord
 	belongs_to :subject
 	has_many :users, through: :user_materials
 	accepts_nested_attributes_for :questions, allow_destroy: true
-	after_initialize :question_default
+	#after_initialize :question_default
 
 	def question_default
 		unless questions.any?
