@@ -4,7 +4,7 @@ class MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials= Material.all.reverse
+    @materials= Material.order('created_at DESC')
     @material= Material.new
   end
 
