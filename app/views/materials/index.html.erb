@@ -3,11 +3,9 @@
     <div class="cont-material">
 
       <ul id="sortable">
-      
+
       <li>
-      <% @materials.each do |material| %>
-      <%= render 'materials', material: material %>
-      <% end %>
+      <%= render @materials %>
       </li>
       </ul>
 
