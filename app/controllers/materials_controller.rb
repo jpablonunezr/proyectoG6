@@ -16,7 +16,8 @@ class MaterialsController < ApplicationController
   # GET /materials/new
   def new
     @material = Material.new
-    @material.questions.build()
+    question = @material.questions.build()
+    alternative = question.alternatives.build
   end
 
   # GET /materials/1/edit
