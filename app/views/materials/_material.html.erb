@@ -4,6 +4,6 @@
 	<p><%= material.description %></p>
 	<div><%= link_to '', material, method: :delete, data: { confirm: 'Seguro?' }, remote: true, class:'material-delete' %></div>
 
-	<div class="material-subject">Asignatura</div>
+	<div class="material-subject subject-<%= material.subject.name %>"></div>
 </li>
 </a>
