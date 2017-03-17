@@ -21,6 +21,13 @@ class MaterialsController < ApplicationController
 
   # GET /materials/1/edit
   def edit
+    unless @material.questions.any?
+     @question = @material.questions.build()
+     @question.alternatives.build
+   end
+
+
+
   end
 
   # POST /materials
@@ -30,11 +37,11 @@ class MaterialsController < ApplicationController
 
     respond_to do |format|
       if @material.save
-        format.html { redirect_to root_path, notice: 'Material was successfully created.' }
+        format.html { redirect_to edit_material_path(@material), notice: 'Material was successfully created.' }
         format.json { render :show, status: :created, location: @material }
         format.js
       else
-        format.html { render :new }
+        format.html { redirect_to root_path, notice: 'vali hongo' }
         format.json { render json: @material.errors, status: :unprocessable_entity }
         format.js
       end
