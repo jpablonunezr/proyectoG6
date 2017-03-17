@@ -5,11 +5,13 @@ class Material < ApplicationRecord
 	belongs_to :subject
 	has_many :users, through: :user_materials
 	accepts_nested_attributes_for :questions, allow_destroy: true
-	after_create :question_default
+	after_initialize :question_default
 
 	def question_default
-		q = questions.build(content: "Pregunta...")
-		q.save
-		q.alternatives.build(content: "Alternativa...").save
+		unless questions.any?
+			q = questions.build(content: "Pregunta...")
+			q.save
+			q.alternatives.build(content: "Alternativa...").save
+		end
 	end
 end
