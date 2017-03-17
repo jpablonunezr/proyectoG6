@@ -26,9 +26,6 @@ class MaterialsController < ApplicationController
      @question = @material.questions.build()
      @question.alternatives.build
    end
-
-
-
   end
 
   # POST /materials

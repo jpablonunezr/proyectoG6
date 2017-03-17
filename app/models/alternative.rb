@@ -1,3 +1,3 @@
 class Alternative < ApplicationRecord
-  belongs_to :question, inverse_of: :alternatives
+  belongs_to :question
 end

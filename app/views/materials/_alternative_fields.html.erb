@@ -1,6 +1,9 @@
-<fieldset>
-  <%= f.label :content, "Alernativa" %>
-  <%= f.text_field :content %>
-  <%= f.check_box :_destroy %>
-  <%= f.label :_destroy, "Eliminar" %>
-</fieldset>
+<div class="nested-fields">
+	<fieldset>
+	  <%= f.label :content, "Alernativa" %>
+	  <%= f.text_field :content %>
+	  <%#= f.check_box :_destroy %>
+	  <%#= f.label :_destroy, "Eliminar" %>
+	  <%= link_to_remove_association "Eliminar Alternativa", f %>
+	</fieldset>
+</div>
