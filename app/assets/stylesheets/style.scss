@@ -420,5 +420,41 @@ main{
 	border-radius:100%;
 	box-shadow:$shadow-short;
 	transition:$transition-2;
+	z-index: 80;
 }
 
+
+
+.material-create-cont{
+	position:absolute;	
+	width:100%;
+	min-height:100%;
+	background:#fff;
+	left:-3px;
+	top:0;	
+	transition:$transition-2;
+	box-shadow:$shadow;
+	box-sizing:border-box;
+	padding:50px;
+	/*display:none;	
+	transform:translate3d(0,10vw,0);
+	opacity:0;*/
+}
+
+
+.material-open{
+	transform:translate3d(0,0,0);
+	opacity:1;
+}
+
+/*
+.btn-open{
+	position:absolute;
+	right:0;
+	width:100%;
+	min-height:100vh;
+	border-radius:0;
+	top:0;
+	margin:0;
+	background:#fff;
+}*/

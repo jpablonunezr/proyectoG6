@@ -2,7 +2,7 @@
     <h1>Mis Materiales</h1>
     <div class="cont-material">
 
-    <ul id="sortable">
+      <ul id="sortable">
         <li>
           <%= render @materials %>
         </li>
@@ -10,15 +10,34 @@
 
     </div>
 
-          <%= render 'form', material: @material %>
 
     <h1>Colaboración</h1>
     <div class="cont-material">
-
-<p class="notice"><%= notice %></p>
+      <div id="test"></div>
+      <p class="notice"><%= notice %></p>
     </div>
 
   </section>
 
 
- <%= link_to '', new_material_path, class:'btn-round btn-new' %>
+  <%#= link_to '', new_material_path, class:'btn-round btn-new' %>
+
+  <div class='btn-round btn-new'></div>
+
+<div class="material-create-cont">
+<%= render 'form', material: @material %>
+</div>
+
+<script type='text/javascript'>
+//$('.material-create-cont').hide();
+
+$('.btn-new').click(function() {
+  $("html, body").animate({scrollTop:0}, 300);
+  $('.material-create-cont').show()
+  $(this).addClass('btn-open')
+  setTimeout( function(){
+  $('.material-create-cont').addClass('material-open');
+  },100); 
+  
+});
+</script>
