@@ -2,38 +2,23 @@
     <h1>Mis Materiales</h1>
     <div class="cont-material">
 
-      <ul id="sortable">
-
-      <li>
-      <%= render @materials %>
-      </li>
+    <ul id="sortable">
+        <li>
+          <%= render @materials %>
+        </li>
       </ul>
 
     </div>
 
+          <%= render 'form', material: @material %>
 
-  <h1>Colaboración</h1>
+    <h1>Colaboración</h1>
     <div class="cont-material">
 
+<p class="notice"><%= notice %></p>
     </div>
 
   </section>
 
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script>
-  $( function() {
-    $( "#sortable" ).sortable({
-      revert: false
-    });
-    $( "ul, li" ).disableSelection();
-  } );
-  </script>
 
-  <!-- <section class="material">
-    <h1>Mis Colaboraciones</h1>
-    <div class="cont-material">
-    </div>
-
-  </section> -->
-
-  <%= link_to '', new_material_path, class:'btn-round btn-new' %>
+ <%= link_to '', new_material_path, class:'btn-round btn-new' %>
