@@ -8,10 +8,8 @@ body{
 
 }
 
-
 ::selection{ background:$main; color:#fff;}
 ::-moz-selection {background:$main; color:#fff;}
-
 
 a{text-decoration: none;}
 
@@ -28,7 +26,7 @@ header{
 	top:0;
 	left:0;
 	width:15%;
-	min-width:300px;
+	max-width:270px;
 	background:#fff;
 	height:100%;
 	z-index: 2;
@@ -241,7 +239,7 @@ main{
 	position:absolute;
 	left:15%;
 	width:85%;
-	min-width:calc(100% - 300px);
+	//max-width:calc(100% - 300px);
 	box-sizing: border-box;
 	padding:50px 0;
 	margin:0;
@@ -259,8 +257,12 @@ main{
 
 	}
 
+	.cont-material{
+		min-height:200px;
+	}
+
 	section.material{
-		margin: 0 0 100px 0;
+		/*margin: 0 0 100px 0;*/
 
 		h1{
 			color:$text-dark;
@@ -283,7 +285,7 @@ main{
 			min-height:auto;
 
 			li:nth-child(1){
-				display:none;
+				//display:none;
 			}
 
 			/*li::after{
@@ -295,22 +297,33 @@ main{
    			top:7px;
    			}*/
 
+   			.a-frame{
+   				position:absolute;
+   				box-sizing:border-box;
+   				padding:25px;
+   				width:100%;
+   				height:100%;
+   				top:0;
+   				left:0;
+   			}
+
    			li{
    				padding:25px;
-				//counter-increment:li;
-				background:#fff;
-				box-shadow:$shadow-soft;
-				box-sizing:border-box;
-				width:calc(100% / 5 - 30px);
-				height:200px;
-				margin:0 30px 30px 0;
-				transition:$transition-2;
-				overflow: hidden;
-				word-wrap: break-word;
-				float: left;
-				border-radius:5px;
-				position:relative;
-				cursor: pointer;
+					//counter-increment:li;
+					background:#fff;
+					box-shadow:$shadow-soft;
+					box-sizing:border-box;
+					width:calc(100% / 5 - 30px);
+					height:200px;
+					margin:0 30px 30px 0;
+					transition:$transition-2;
+					overflow: hidden;
+					word-wrap: break-word;
+					float: left;
+					border-radius:5px;
+					position:relative;
+
+
 
 
 				h2{
@@ -363,25 +376,39 @@ main{
 
 			}
 
-			.public-level-1{
+			.public-level{
 				position:absolute;
 				bottom:15px;
 				left:10px;
 				width:10px;
 				height:10px;
 				border-radius:100%;
-				background-color:#ccc;
+				background-color:$gray-light;
+				box-sizing: border-box;
 
 			}
 
-			.public-level-1::after{
-				content:'Público';
+			.level-1::after{
+				content:'Privado';
 				position:absolute;
 				font-size:11px;
-				left:15px;
+				left:13px;
 				top:0;
 			}
 
+			.level-0::after{
+				content:'Público';
+				position:absolute;
+				font-size:11px;
+				left:13px;
+				top:-2px;
+			}
+
+			.level-0{
+				background:#fff;
+				border:2px solid $gray-light;
+
+			}
 		}
 
 
@@ -486,25 +513,30 @@ main{
 	textarea::-moz-placeholder {color:$text-light; font-weight:300;}			
 	textarea:-moz-placeholder {color:$text-light; font-weight:300;}
 
+	input:focus,
+	textarea:focus{
+		background-color:$gray-lighter;
+	}
+
 	input,
 	textarea{
-		padding:5px;
+		padding:10px 15px;
 		background:none;
 		overflow:hidden;
+		box-sizing:border-box;
+		transition:$transition-2;
 	}
 	
 	.title{
 		width:100%;
 		font-size:37px;
 		font-weight:bold;
-		padding:10px 5px;
 	}
 
 	.description{
 		width:100%;
 		font-size:20px;
 		border:none;
-		padding:10px 5px;
 		resize: none;
 		width:100%;
 		margin:0 0 20px 0;
@@ -553,6 +585,11 @@ main{
 
 }
 
+	.btn-create:focus,
+	.btn-create:hover{
+		background:$main-dark
+	}
+
 
 .btn-action{
 	position:absolute;
@@ -571,7 +608,7 @@ main{
 	right:0;
 	bottom:0;
 	background-color:rgba(0,0,0,.6);
-	width:85%;
+	width:100%;
 	height:100%;
 }
 

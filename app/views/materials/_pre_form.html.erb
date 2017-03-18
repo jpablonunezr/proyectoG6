@@ -1,5 +1,5 @@
 <%= form_for(material) do |f| %>
-<% if material.errors.any? %>
+<% if material.errors.any?%>
 <div id="error_explanation">
   <h2><%= pluralize(material.errors.count, "error") %> prohibited this material from being saved:</h2>
 
@@ -11,8 +11,8 @@
 </div>
 <% end %>
 
-<%= f.text_field :title, placeholder:'Título...', maxlength:20, class:'title', autofocus:true %>
-<%= f.text_area :description, placeholder:'Descripcion completa de tu proyecto', maxlength:70, class:'description' %>
+<%= f.text_field :title, placeholder:'Título...', maxlength:20, class:'title', autofocus:true , autocomplete: 'off' %>
+<%= f.text_area :description, placeholder:'Descripcion completa de tu proyecto...', maxlength:70, class:'description', autocomplete: 'off'  %>
 
 
 <ul>
