@@ -2,24 +2,27 @@
     <h1>Mis Materiales</h1>
     <div class="cont-material">
 
-      <ul>       
-          <%= render @materials %>        
+
+      <ul id="sortable">
+        <li>
+          <% @materials.each do |material| %>
+          <%= render 'material', m: material %>
+           <% end %>
+        </li>
       </ul>
 
     </div>
 
 
     <h1>Colaboración</h1>
-    <% unless @collaborations.nil? %>
      <div class="cont-material">
-     <ul id="sortable">
-      <% @collaborations.each do |col| %>
-      <li><%= col.material.title %></li>
-      <li><%= col.material.description %></li>
-      <% end %>
-    <% end %>
-    
-    </ul>
+       <ul id="sortable">
+        <li>
+          <% @collaborations.each do |collaboration| %>
+            <%= render 'collaboration', collaboration: collaboration %>
+          <% end %>
+        </li>
+       </ul>
     </div>
     
     <div class="cont-material">

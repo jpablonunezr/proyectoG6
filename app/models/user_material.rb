@@ -3,5 +3,5 @@ class UserMaterial < ApplicationRecord
   belongs_to :user
   has_many :comments
 
-  enum role: [:guest, :user, :collaborator, :admin]
+  enum role: [:guest, :user, :collaborator, :owner]
 end
