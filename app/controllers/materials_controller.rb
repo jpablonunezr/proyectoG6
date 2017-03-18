@@ -4,7 +4,7 @@ class MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials = current_user.materials.order('created_at DESC')
+    @materials = current_user.user_materials.where(role: "owner").order('created_at DESC')
     @collaborations = current_user.user_materials.where(role: "collaborator").order('created_at DESC')
     # @materials= Material.order('created_at DESC')
     @material= Material.new
@@ -51,6 +51,7 @@ class MaterialsController < ApplicationController
   # PATCH/PUT /materials/1.json
   def update
     respond_to do |format|
+      @material.updated_by = current_user.id
       if @material.update_attributes(material_params)
         format.html { redirect_to @material, notice: 'Material was successfully updated.' }
         format.json { render :show, status: :ok, location: @material }

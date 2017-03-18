@@ -4,7 +4,9 @@
 
       <ul id="sortable">
         <li>
-          <%= render @materials %>
+          <% @materials.each do |material| %>
+          <%= render 'material', m: material %>
+           <% end %>
         </li>
       </ul>
 
@@ -14,11 +16,12 @@
     <h1>Colaboración</h1>
      <div class="cont-material">
        <ul id="sortable">
-        <% @collaborations.each do |collaboration| %>
-          <%= render 'collaboration', collaboration: collaboration %>
-    <% end %>
-    
-    </ul>
+        <li>
+          <% @collaborations.each do |collaboration| %>
+            <%= render 'collaboration', collaboration: collaboration %>
+          <% end %>
+        </li>
+       </ul>
     </div>
     
     <div class="cont-material">

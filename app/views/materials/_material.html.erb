@@ -1,11 +1,11 @@
-<a href="<%= edit_material_path(material) %>">
-<li id="materials_<%= material.id %>">
-	<h2> <%= material.title %></h2>
-	<p><%= material.description %></p>
-	<div><%= link_to '', material, method: :delete, data: { confirm: 'Seguro?' }, remote: true, class:'material-delete' %></div>
+<a href="<%= edit_material_path(m.material) %>">
+<li id="materials_<%= m.material.id %>">
+	<h2> <%= m.material.title %></h2>
+	<p><%= m.material.description %></p>
+	<div><%= link_to '', m.material, method: :delete, data: { confirm: 'Seguro?' }, remote: true, class:'material-delete' %></div>
 
-	<div class="material-subject subject-<%= material.subject.name %>"></div>
+	<div class="material-subject subject-<%= m.material.subject.name %>"></div>
 
-	<div class="public-level-<%= material.public_level %>"></div>
+	<div class="public-level-<%= m.material.public_level %>"></div>
 </li>
 </a>
