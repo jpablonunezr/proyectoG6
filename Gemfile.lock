@@ -48,6 +48,7 @@ GEM
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
     byebug (9.0.6)
+    cancancan (1.16.0)
     cocoon (1.2.9)
     coderay (1.1.1)
     coffee-rails (4.2.1)
@@ -185,6 +186,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   byebug
+  cancancan
   cocoon
   coffee-rails (~> 4.2)
   devise

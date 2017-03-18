@@ -12,4 +12,5 @@ class User < ApplicationRecord
   has_many :levels, through: :user_levels
 	has_many :networks, through: :user_networks
   has_many :materials, through: :user_materials
+
 end

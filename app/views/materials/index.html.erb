@@ -12,6 +12,18 @@
 
 
     <h1>Colaboración</h1>
+    <% unless @collaborations.nil? %>
+     <div class="cont-material">
+     <ul id="sortable">
+      <% @collaborations.each do |col| %>
+      <li><%= col.material.title %></li>
+      <li><%= col.material.description %></li>
+      <% end %>
+    <% end %>
+    
+    </ul>
+    </div>
+    
     <div class="cont-material">
       <div id="test"></div>
       <p class="notice"><%= notice %></p>
