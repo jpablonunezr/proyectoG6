@@ -5,7 +5,7 @@ class MaterialsController < ApplicationController
   # GET /materials.json
   def index
     @materials = current_user.materials.order('created_at DESC')
-    @collaborations = current_user.user_materials.where(role: "collaborator")
+    @collaborations = current_user.user_materials.where(role: "collaborator").order('created_at DESC')
     # @materials= Material.order('created_at DESC')
     @material= Material.new
   end
@@ -18,7 +18,7 @@ class MaterialsController < ApplicationController
   # GET /materials/new
   def new
     @material = Material.new
-    question = @material.questions.build()
+    @question = @material.questions.build()
   end
 
   # GET /materials/1/edit
@@ -33,7 +33,7 @@ class MaterialsController < ApplicationController
   # POST /materials.json
   def create
     @material = Material.new(material_params)
-    @material.user_materials.build(role: 0, user_id: current_user.id)
+    @material.user_materials.build(role: 3, user_id: current_user.id)
     respond_to do |format|
       if @material.save
         format.html { redirect_to root_path(@material), notice: 'Material was successfully created.' }
