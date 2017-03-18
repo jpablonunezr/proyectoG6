@@ -34,22 +34,61 @@
 
   <%#= link_to '', new_material_path, class:'btn-round btn-new' %>
 
-  <div class='btn-round btn-new'></div>
+  <div class='btn-round btn-new'>
+  <div class="btn-action"></div>
 
-<div class="material-create-cont">
-<%= render 'form', material: @material %>
-</div>
+    <div class="material-create-cont material--content">
+      <%= render 'pre_form', material: @material %>
+    </div>
 
-<script type='text/javascript'>
-$('.material-create-cont').hide();
+  </div>
 
-$('.btn-new').click(function() {
-  $("html, body").animate({scrollTop:0}, 300);
-  $('.material-create-cont').show()
-  $(this).addClass('btn-open')
-  setTimeout( function(){
-  $('.material-create-cont').addClass('material-open');
+  <div class="shadow-box"></div>
+
+
+
+  <script type='text/javascript'>
+//$('.material-create-cont').hide();
+
+$('.btn-action').click(function() {
+   // $("html, body").animate({scrollTop:0}, 300);
+   $('.title').focus();
+   $(this).hide();
+   $('.shadow-box').fadeIn(200);
+   $('.material').addClass('material-off');
+   $('.material-create-cont').show();
+   $('.btn-new').addClass('btn-open');
+   setTimeout( function(){
+    $('.material-create-cont').addClass('material-open');
   },100); 
-  
+
 });
+
+
+$(document).keyup(function(e) {
+if (e.keyCode == 27) {
+   $('.btn-action').show();
+   $('.shadow-box').fadeOut(200);
+   $('.material').removeClass('material-off');
+   $('.material-create-cont').hide();
+   $('.btn-new').removeClass('btn-open');
+   setTimeout( function(){
+    $('.material-create-cont').removeClass('material-open');
+  },100);  
+}
+});
+
+
+$('.shadow-box').click(function() {
+   $('.btn-action').show();
+   $('.shadow-box').fadeOut(200);
+   $('.material').removeClass('material-off');
+   $('.material-create-cont').hide();
+   $('.btn-new').removeClass('btn-open');
+   setTimeout( function(){
+    $('.material-create-cont').removeClass('material-open');
+  },100);  
+});
+
+
 </script>
