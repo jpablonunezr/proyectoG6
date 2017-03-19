@@ -5,6 +5,7 @@ body{
 	font-family: 'Roboto', sans-serif;
 	font-size: 15px;
 	color:$text;
+	overflow-x:hidden;
 
 }
 
@@ -109,7 +110,8 @@ header{
 }
 
 .main-edit-on{
-	transform:translate3d(15vw,0,0)
+	transform:translate3d(15vw,0,0);
+	position:fixed!important;
 }
 
 .footer-edit-on{
@@ -122,7 +124,7 @@ header{
 		width:30vw;
 		min-height:100vh;
 		height:auto;
-		padding: 30px 0 0 0;
+		padding: 30px 0 100px 0;
 
 		.edit-content{
 			margin:0 auto;
@@ -486,6 +488,7 @@ main{
 			// align-content: flex-start;
 			position:relative;
 			min-height:auto;
+			margin:0 0 50px 0;
 
 			li:nth-child(1){
 				display:none;
@@ -571,11 +574,24 @@ main{
 				.subject-Matemática::after{content:'mat'}
 				.subject-Historia::after{content:'his'}
 				.subject-Ciencias::after{content:'cie'}
+				.subject-Química::after{content:'qui'}			
+				.subject-Biología::after{content:'bio'}			
+				.subject-Física::after{content:'fis'}				
+				.subject-Ingles::after{content:'ing'}				
+				.subject-Religión::after{content:'rel'}
+				.subject-Psicología::after{content:'psi'}
+
 
 				.subject-Lenguaje{background-color:$len;}
 				.subject-Matemática{background-color:$mat;}
 				.subject-Historia{background-color:$his;}
 				.subject-Ciencias{background-color:$cie;}
+				.subject-Química{background-color:$qui;}				
+				.subject-Biología{background-color:$bio;}				
+				.subject-Física{background-color:$fis;}				
+				.subject-Ingles{background-color:$ing;}				
+				.subject-Religión{background-color:$rel;}
+				.subject-Psicología{background-color:$psi;}
 
 			}
 
@@ -583,26 +599,26 @@ main{
 				position:absolute;
 				bottom:15px;
 				left:15px;
-				width:8px;
-				height:8px;
-				border-radius:100%;
+				width:20px;
+				height:20px;
 				background-color:$text-light;
 				box-sizing: border-box;
-				border:2px solid $text-light;
+				opacity: .75;
 
 			}
 
 			.level-1::after,
 			.level-0::after{
 				position:absolute;
-				font-size:11px;
-				top:-4px;
-				left:10px;
+				font-size:12px;
+				top:4px;
+				left:24px;
 			}
 
 			.level-1::after{content:'Público';}
 			.level-0::after{content:'Privado'}
-			.level-0{background:#fff;}
+			.level-0{background:url('private.svg') no-repeat center/contain;}
+			.level-1{background:url('public.svg') no-repeat center/contain;}
 		}
 
 
@@ -619,7 +635,7 @@ main{
 
 
 
-	.btn-new{background:url('add.svg') no-repeat center/20px $main;}
+	.btn-new{background:url('add.svg') no-repeat center/15px $main;}
 	/*.btn-new:hover{
 		background-size:25px;
 		transform:scale(1.2);
@@ -656,8 +672,8 @@ main{
 		position:fixed;
 		bottom:20px;
 		right:20px;
-		width:60px;
-		height:60px;
+		width:50px;
+		height:50px;
 		border-radius:100%;
 		box-shadow:$shadow-short;
 		transition:$transition-2;
@@ -802,7 +818,7 @@ main{
 	display:none;
 	position:fixed;
 	right:0;
-	bottom:0;
+	top:0;
 	background-color:rgba(0,0,0,.6);
 	width:100vw;
 	height:100vh;
@@ -859,3 +875,13 @@ main{
 
 .search-on{width:500px;}
 .search-on input{box-shadow:$shadow-soft;}
+
+
+
+.proyect-cont{
+	background-color:#fff;
+	box-shadow:$shadow;
+	padding:30px;
+	box-sizing:border-box;
+	margin:50px 0;
+}

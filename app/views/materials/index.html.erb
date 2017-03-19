@@ -31,6 +31,8 @@
 
 </section>
 
+<div class="shadow-box"></div>
+<div class="shadow-box-2"></div>
 
 <%#= link_to '', new_material_path, class:'btn-round btn-new' %>
 
@@ -42,9 +44,6 @@
   </div>
 
 </div>
-
-<div class="shadow-box"></div>
-<div class="shadow-box-2"></div>
 
 
 <script type='text/javascript'>
@@ -99,7 +98,6 @@ $('.shadow-box-2').click(function() {
   $('main').removeClass('main-edit-on');  
   $('.shadow-box-2').fadeOut(200);
   $('.material').removeClass('material-off');
-  $('body').css({'overflow-x':'auto'});
   $('.copy-right, .logout, .acc h4, .acc h5').removeClass('footer-edit-on');
 });
 
