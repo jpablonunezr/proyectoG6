@@ -131,8 +131,9 @@ header{
 			position:relative;
 			top:20px;
 			width:400px;
-			overflow-x:hidden;
-			transition:$transition-2;
+			//overflow-x:hidden;
+			transition:$transition-2;			
+			transition-delay:.2s;
 			}
 
 		
@@ -266,6 +267,19 @@ header{
 		margin:15px auto 30px 0;
 	}
 
+.btn-upload{
+	width: 150px;
+	height: 150px;
+	background: red;
+	border-radius: 100%;
+	position: absolute;
+	top: -190px;
+	left: calc(50% - 75px);
+	z-index: 555;
+	opacity:0;
+	display:none;
+	cursor: pointer;
+}
 
 
 
@@ -876,8 +890,6 @@ main{
 .search-on{width:500px;}
 .search-on input{box-shadow:$shadow-soft;}
 
-
-
 .proyect-cont{
 	background-color:#fff;
 	box-shadow:$shadow;
@@ -885,3 +897,5 @@ main{
 	box-sizing:border-box;
 	margin:50px 0;
 }
+
+

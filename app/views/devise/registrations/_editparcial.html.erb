@@ -1,6 +1,9 @@
 <div class="edit-content">
-  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
   <%= devise_error_messages! %>
+
+    <%= f.file_field :photo, class:'btn-upload' %>
+    <%= f.hidden_field :photo_cache %>
 
   <div class="input-profile">
     <%= f.text_field :first_name, autocomplete:false, class:'ifirst' %>
