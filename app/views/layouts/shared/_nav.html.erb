@@ -5,28 +5,60 @@
 		<div class="acc">
 			<div class="img-profile"></div>
 			<h4><%= current_user.first_name %> <%= current_user.last_name %></h4>
-			<h5>ciudad</h5>
+			<h5><%= current_user.email %> </h5>
 			<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Cerrar sesión</a>			
 		</div>
 
-	<p class="copy-right">Todos los derechos reservados.<br>&copy; 2017 Teachub, y teachub.com son marcas registradas.</p>
-	<span class="edit-profile">ADSAD</span>		
+		
+		<p class="copy-right">Todos los derechos reservados.<br>&copy; 2017 Teachub, y teachub.com son marcas registradas.</p>
+		<div class="edit-profile">
+			<div></div><div></div><div></div>
+		</div>	
+	
+
 	</nav>
 
-	<% else %>
-	<nav></nav>
-	<% end %>
 
 <%= render "devise/registrations/editparcial" %>
+
+
+	<% else %>
+
+	<nav></nav>
+
+	<% end %>
 
 </header>
 
 <script type='text/javascript'>
 	
 $('header .edit-profile').click(function() {
-    $(this).css({height:'0'});
-    $('header').addClass('user-edit')
+    $('body').css({'overflow-x':'hidden'});
+    $('.edit-content').show(0); 
+    $('header').addClass('user-edit');    
+    $('.edit-content').addClass('edit-on');
+    $('main').addClass('main-edit-on');
+   $('.shadow-box-2').fadeIn(200);
+   $('.material').addClass('material-off');
+   $('.copy-right, .logout, .acc h4, .acc h5').addClass('footer-edit-on');  
+   $('.ifirst').focus(); 
 });
-    
+  
+
+$(document).keyup(function(e) {
+if (e.keyCode == 27) {
+    $('header').removeClass('user-edit');  
+    $('.edit-content').hide(0); 
+    $('.edit-content').removeClass('edit-on');
+    $('main').removeClass('main-edit-on');  
+   $('.shadow-box-2').fadeOut(200);
+   $('.material').removeClass('material-off');
+   $('.copy-right, .logout, .acc h4, .acc h5').removeClass('footer-edit-on');
+   $('body').css({'overflow-x':'auto'});
+}
+});
+
+  
+
 
 </script>

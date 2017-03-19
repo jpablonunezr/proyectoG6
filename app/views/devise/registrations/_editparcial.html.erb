@@ -3,11 +3,11 @@
   <%= devise_error_messages! %>
 
   <div class="input-profile">
-    <%= f.text_field :first_name, autocomplete:false %>
+    <%= f.text_field :first_name, autocomplete:false, class:'ifirst' %>
     <%= f.label :Nombre %>
 </div>
 
-<div class="input-profile">
+<div class="input-profile isecond">
     <%= f.text_field :last_name, autocomplete:false %>
     <%= f.label :Apellido %>
 </div>
@@ -39,7 +39,7 @@
   <% end %>
 
 
-  <div class="input-profile">
+  <div class="input-profile isecond">
       <%= f.password_field :password_confirmation, autocomplete: "off" %>
       <%= f.label :repita_clave %>
   </div>

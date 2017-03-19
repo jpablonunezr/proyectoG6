@@ -1,61 +1,53 @@
 <form action="<%= users_index_path %>">
-  <input type="text" name="search">
-  <button>Enviar</button>
+<div class="btn-search">    
+    <input type="text" name="search" placeholder="Buscar usuarios..." autocomplete="off">
+    <button></button>
+ </div>
 </form>
 
-  <section class="material">
-
-
-    <h1>Mis Materiales</h1>
-    <div class="cont-material">
-
-
-      <ul id="sortable">
-        <li>
-          <% @materials.each do |material| %>
-          <%= render 'material', m: material %>
-           <% end %>
-        </li>
-      </ul>
-
-    </div>
-
-
-    <h1>Colaboración</h1>
-     <div class="cont-material">
-       <ul id="sortable">
-        <li>
-          <% @collaborations.each do |collaboration| %>
-            <%= render 'collaboration', collaboration: collaboration %>
-          <% end %>
-        </li>
-       </ul>
-    </div>
-    
-    <div class="cont-material">
-      <div id="test"></div>
-      <p class="notice"><%= notice %></p>
-    </div>
-
-  </section>
-
-
-  <%#= link_to '', new_material_path, class:'btn-round btn-new' %>
-
-  <div class='btn-round btn-new'>
-  <div class="btn-action"></div>
-
-    <div class="material-create-cont material--content">
-      <%= render 'pre_form', material: @material %>
-    </div>
+<section class="material">
+  <h1>Mis Materiales</h1>
+  <div class="cont-material">
+    <ul>
+      <li>
+        <% @materials.each do |material| %>
+        <%= render 'material', m: material %>
+        <% end %>
+      </li>
+    </ul>
 
   </div>
 
-  <div class="shadow-box"></div>
+  <h1>Colaboración</h1>
+  <div class="cont-material">
+   <ul>
+    <li>
+      <% @collaborations.each do |collaboration| %>
+      <%= render 'collaboration', collaboration: collaboration %>
+      <% end %>
+    </li>
+  </ul>
+</div>
+
+</section>
 
 
+<%#= link_to '', new_material_path, class:'btn-round btn-new' %>
 
-  <script type='text/javascript'>
+<div class='btn-round btn-new'>
+  <div class="btn-action"></div>
+
+  <div class="material-create-cont material--content">
+    <%= render 'pre_form', material: @material %>
+  </div>
+
+</div>
+
+<div class="shadow-box"></div>
+<div class="shadow-box-2"></div>
+
+
+<script type='text/javascript'>
 //$('.material-create-cont').hide();
 
 $('.btn-action').click(function() {
@@ -70,11 +62,11 @@ $('.btn-action').click(function() {
     $('.material-create-cont').addClass('material-open');
   },100); 
 
-});
+ });
 
 
 $(document).keyup(function(e) {
-if (e.keyCode == 27) {
+  if (e.keyCode == 27) {
    $('.btn-action').show();
    $('.shadow-box').fadeOut(200);
    $('.material').removeClass('material-off');
@@ -83,20 +75,40 @@ if (e.keyCode == 27) {
    setTimeout( function(){
     $('.material-create-cont').removeClass('material-open');
   },100);  
-}
+ }
 });
 
 
 $('.shadow-box').click(function() {
-   $('.btn-action').show();
-   $('.shadow-box').fadeOut(200);
-   $('.material').removeClass('material-off');
-   $('.material-create-cont').hide();
-   $('.btn-new').removeClass('btn-open');
-   setTimeout( function(){
-    $('.material-create-cont').removeClass('material-open');
-  },100);  
+ $('.btn-action').show();
+ $('.shadow-box').fadeOut(200);
+ $('.material').removeClass('material-off');
+ $('.material-create-cont').hide();
+ $('.btn-new').removeClass('btn-open');
+ setTimeout( function(){
+  $('.material-create-cont').removeClass('material-open');
+},100);  
 });
 
+
+
+$('.shadow-box-2').click(function() {
+  $('header').removeClass('user-edit');  
+  $('.edit-content').hide(0); 
+  $('.edit-content').removeClass('edit-on');
+  $('main').removeClass('main-edit-on');  
+  $('.shadow-box-2').fadeOut(200);
+  $('.material').removeClass('material-off');
+  $('body').css({'overflow-x':'auto'});
+  $('.copy-right, .logout, .acc h4, .acc h5').removeClass('footer-edit-on');
+});
+
+$('.btn-search input').focusin(function() {
+   $('.btn-search').addClass('search-on');
+ });
+
+$('.btn-search input').focusout(function() {
+   $('.btn-search').removeClass('search-on');
+ });
 
 </script>
