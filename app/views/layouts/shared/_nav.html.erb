@@ -1,4 +1,4 @@
-<header>
+<header><!-- EDIIIIIIIIIIIIT-->
 	<div class="logo" href="<%= root_path %>"></div>
 	<% if user_signed_in? %>
 	<nav>
@@ -9,14 +9,24 @@
 			<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Cerrar sesión</a>			
 		</div>
 
-	<p class="copy-right">Todos los derechos reservados.<br>&copy; 2017 Teachub, y teachub.com son marcas registradas.</p>		
+	<p class="copy-right">Todos los derechos reservados.<br>&copy; 2017 Teachub, y teachub.com son marcas registradas.</p>
+	<span class="edit-profile">ADSAD</span>		
 	</nav>
 
 	<% else %>
-
 	<nav></nav>
-
 	<% end %>
 
+<%= render "devise/registrations/editparcial" %>
 
 </header>
+
+<script type='text/javascript'>
+	
+$('header .edit-profile').click(function() {
+    $(this).css({height:'0'});
+    $('header').addClass('user-edit')
+});
+    
+
+</script>

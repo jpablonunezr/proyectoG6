@@ -4,5 +4,6 @@
 	<p><%= m.material.description %></p>
 	<div><%= link_to '', m.material, method: :delete, data: { confirm: 'Seguro?' }, remote: true, class:'material-delete' %></div>
 	<div class="material-subject subject-<%= m.material.subject.name %>"></div>
+	<div class="public-level level-<%= m.material.public_level %>"></div>
 </a>
 </li>

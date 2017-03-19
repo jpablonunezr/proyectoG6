@@ -28,13 +28,16 @@ header{
 	top:0;
 	left:0;
 	width:15%;
-	max-width:270px;
+	//max-width:270px;
 	background:#fff;
 	height:100%;
 	z-index: 2;
 	box-sizing: border-box;
 	padding:30px;
 	margin:0;
+	transition:$transition-2;
+
+
 
 	.acc{
 		width:100%;
@@ -88,6 +91,148 @@ header{
 	}
 
 }
+
+.user-edit{
+		position:absolute;
+		width:60%;
+		min-height:100vh;
+		height:auto;
+		padding: 20px 0 120px 0;
+		//min-height:100%;
+/*
+		nav .acc{
+			width:200px;		
+		}
+*/
+		.edit-content{
+			margin:0 auto;
+			position:relative;
+			top:20px;
+			width:450px;
+			transition:$transition-2;
+			}
+
+
+		.input-profile{
+			display:inline-block;			
+			margin:0 20px 40px 0;
+			width:45%;
+
+			input{
+				font-size:20px;
+				display:block;
+				padding:2px 0;
+				border:0;
+				text-align:center;
+				width:100%;
+				border-bottom:1px solid $text-light;
+				color:$text-darker;
+			}
+
+			label{
+				text-transform:uppercase;
+				font-size:10px;
+				letter-spacing:1px;
+				margin:5px 0 0 0;
+				display:block;
+			}
+
+
+
+
+		}
+
+	.large{
+		width:calc(100% - 20px);
+	}
+
+	.msj{
+				text-align:center;
+				width:auto;
+				display:block;
+				font-size:16px;
+				cursor: pointer;
+				border-radius:3px;
+				color:$text-darker;
+				cursor: pointer;
+				transition:$transition-2;
+				overflow:hidden;
+				margin:20px 0 5px 0;
+			}
+
+	.msj:hover{
+		color:$main;
+
+	}
+
+	.hidde-pwd{
+		position:relative;
+		width:100%;
+		height:0;
+		transition:$transition-2;
+		overflow:hidden;
+
+		input,
+		label{
+			opacity:0;
+			transition:$transition-2;
+		}
+
+		label{
+			transform:translate3d(-10px,0, 0);
+			transition-delay:0.3s;
+		}
+
+		input{
+			width:50%;
+		}
+	}
+
+	.pwd-show{
+		input,
+		label{
+			opacity:1;
+			width:100%;
+			transform:translate3d(0,0,0);
+		}
+
+
+	 }
+
+	 .pwd-last{
+		display:block;
+		margin:60px auto 0 auto;
+
+		label{
+			display:block;
+			text-align:center;
+		}
+	}
+
+
+}
+
+
+	.btn-update{
+		position:relative;		
+		background:$main;
+		color:#fff;
+		text-transform:uppercase;
+		border:0;
+		border-radius:3px;
+		padding:10px 15px;
+		font-size:12px;
+		transition:$transition-2;
+		margin:50px auto 0 auto;
+	}
+
+	.delete-acc{
+		position:relative;
+		display:inline-block;
+		font-size: 12px;
+		margin:15px auto 30px 0;
+	}
+
 
 
 /** LOGIN****/
@@ -287,7 +432,7 @@ main{
 			min-height:auto;
 
 			li:nth-child(1){
-				//display:none;
+				display:none;
 			}
 
 			/*li::after{
@@ -355,7 +500,7 @@ main{
 				}
 
 				.material-subject::after{
-					content:'LEN';					
+					content:'';					
 					width:100%;
 					height:100%;
 					line-height:19px;
@@ -381,36 +526,27 @@ main{
 			.public-level{
 				position:absolute;
 				bottom:15px;
-				left:10px;
-				width:10px;
-				height:10px;
+				left:15px;
+				width:8px;
+				height:8px;
 				border-radius:100%;
-				background-color:$gray-light;
+				background-color:$text-light;
 				box-sizing: border-box;
+				border:2px solid $text-light;
 
 			}
 
-			.level-1::after{
-				content:'Privado';
-				position:absolute;
-				font-size:11px;
-				left:13px;
-				top:0;
-			}
-
+			.level-1::after,
 			.level-0::after{
-				content:'Público';
 				position:absolute;
 				font-size:11px;
-				left:13px;
-				top:-2px;
+				top:-4px;
+				left:10px;
 			}
 
-			.level-0{
-				background:#fff;
-				border:2px solid $gray-light;
-
-			}
+			.level-1::after{content:'Público';}
+			.level-0::after{content:'Privado'}
+			.level-0{background:#fff;}
 		}
 
 

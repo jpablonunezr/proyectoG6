@@ -1,0 +1,79 @@
+<div class="edit-content">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="input-profile">
+    <%= f.text_field :first_name, autocomplete:false %>
+    <%= f.label :Nombre %>
+</div>
+
+<div class="input-profile">
+    <%= f.text_field :last_name, autocomplete:false %>
+    <%= f.label :Apellido %>
+</div>
+
+<div class="input-profile large">
+    <%= f.email_field :email , placeholder:'Email', autocomplete: 'off'%> 
+    <%= f.label :email %>
+</div>
+
+
+
+<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+<% end %>
+
+<br>  
+
+
+<div class="msj">¿Quieres cambiar la clave?</div>
+
+<div class="hidde-pwd">
+    <div class="input-profile">
+      <%= f.password_field :password, autocomplete: "off" %>
+      <%= f.label :clave_nueva %>     
+  </div>
+
+  <% if @minimum_password_length %> <br />
+  <em><%= @minimum_password_length %> characters minimum</em>
+  <% end %>
+
+
+  <div class="input-profile">
+      <%= f.password_field :password_confirmation, autocomplete: "off" %>
+      <%= f.label :repita_clave %>
+  </div>
+
+</div>
+
+
+
+<div class="input-profile pwd-last">
+ <%= f.password_field :current_password, autocomplete: "off" %>
+ <%= f.label :clave_actual %>
+</div>  
+
+
+<center>
+<button type="submit" class="btn-update">Actualizar</button>
+</center>
+<% end %>
+
+<center>
+<%= link_to 'Dar de baja mi cuenta', registration_path(resource_name), data: { confirm: "¿Estás seguro?" }, method: :delete, class:'delete-acc' %>
+</center>
+
+</div>
+
+<script type='text/javascript'>
+
+$('.msj').click(function() {
+    $(this).css({height:'0'});
+    $('.hidde-pwd').css({height:'60px'});
+     setTimeout( function(){
+    $('.hidde-pwd').addClass('pwd-show');
+  },100);  
+});
+    
+
+</script>
