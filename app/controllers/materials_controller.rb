@@ -109,6 +109,6 @@ class MaterialsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def material_params
-      params.require(:material).permit(:title, :description, :created_at, :updated_at, :updated_by, :public_level, :owner, :level_id, :subject_id, questions_attributes: [:id, :content, :_destroy, alternatives_attributes: [:id, :content, :_destroy] ])
+      params.require(:material).permit(:title, :description, :created_at, :updated_at, :updated_by, :public_level, :level_id, :subject_id, questions_attributes: [:id, :content, :_destroy, alternatives_attributes: [:id, :content, :_destroy] ])
     end
 end
