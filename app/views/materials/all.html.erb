@@ -1,0 +1,22 @@
+<table>
+  <thead>
+    <tr>
+      <th>Titulo</th>
+      <th>Descripcion</th>
+      <th>Asignatura</th>
+      <th>Nivel</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+    <% @materials.each do |material| %>
+      <tr>
+        <td><%= material.title %></td>
+        <td><%= material.description %></td>
+        <td><%= material.subject.name %></td>
+        <td><%= material.level.name %></td>  
+      </tr>
+    <% end %>
+  </tbody>
+        
+</table>

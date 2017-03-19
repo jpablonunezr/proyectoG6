@@ -12,6 +12,16 @@ class MaterialsController < ApplicationController
     @material= Material.new
   end
 
+  def all
+    if params[:find].present?
+      @materials = Material.where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%")
+    else
+      @materials = Material.where(public_level: 1)
+    end
+  end
+
+
+
   # GET /materials/1
   # GET /materials/1.json
   def show
