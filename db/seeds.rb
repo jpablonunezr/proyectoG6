@@ -10,8 +10,8 @@ Subject.destroy_all
 User.destroy_all
 Level.destroy_all
 
-User.create!(email:'alejandra@gmail.com', password:'123456', first_name:'alejandra', last_name:'Diaz')
-User.create!(email:'pablo@gmail.com', password:'123456', first_name:'Pablo', last_name:'Nuñez')
+u1 = User.create!(email:'alejandra@gmail.com', password:'123456', first_name:'Alejandra', last_name:'Díaz')
+u2 = User.create!(email:'pablo@gmail.com', password:'123456', first_name:'Pablo', last_name:'Nuñez')
 
 l = Level.create!(name:'Pre-Kínder')
 Level.create!(name:'Kínder')
@@ -39,10 +39,22 @@ Subject.create!(name:'Psicología')
 Subject.create!(name:'Ingles')
 Subject.create!(name:'Religión')
 
-11.times do |i|
-	Material.create!(title:"Proyecto #{i}",
+5.times do |i|
+	m = Material.create!(title:"Proyecto #{i}",
+    description:'Lorem ipsum dolor sit amet.',
+    subject: s,
+    level: l,
+    public_level: 0)
+    m.user_materials.build(user_id: u1.id, role: "owner").save
+    m.user_materials.build(user_id: u2.id, role: "owner").save
+end
+
+5.times do |i|
+	m = Material.create!(title:"Proyecto #{i+5}",
     description:'Lorem ipsum dolor sit amet.',
     subject: s,
     level: l
-  )
+    public_level: 0)
+    m.user_materials.build(user_id: u1.id, role: "collaborator").save
+    m.user_materials.build(user_id: u2.id, role: "collaborator").save
 end

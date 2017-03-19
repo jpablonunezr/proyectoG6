@@ -6,7 +6,6 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
       }
 
-
   root 'materials#index'
 
 end
