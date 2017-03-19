@@ -53,7 +53,7 @@ end
 	m = Material.create!(title:"Proyecto #{i+5}",
     description:'Lorem ipsum dolor sit amet.',
     subject: s,
-    level: l
+    level: l,
     public_level: 0)
     m.user_materials.build(user_id: u1.id, role: "collaborator").save
     m.user_materials.build(user_id: u2.id, role: "collaborator").save
