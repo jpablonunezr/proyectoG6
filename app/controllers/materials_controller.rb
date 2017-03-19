@@ -1,6 +1,8 @@
 class MaterialsController < ApplicationController
   before_action :set_material, only: [:show, :edit, :update, :destroy]
-
+  before_action :validate_permission, only: [:edit, :update]
+  before_action :validate_public, only: [:show]
+  before_action :validate_owner, only: [:destroy]
   # GET /materials
   # GET /materials.json
   def index
@@ -13,6 +15,7 @@ class MaterialsController < ApplicationController
   # GET /materials/1
   # GET /materials/1.json
   def show
+
   end
 
   # GET /materials/new
@@ -82,6 +85,26 @@ class MaterialsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_material
       @material = Material.find(params[:id])
+    end
+
+    def validate_permission
+      unless @material.user_materials.find_by(user_id: current_user.id)
+        redirect_to root_path, notice: 'No tiene permiso.'
+      end
+    end
+
+    def validate_owner
+      unless @material.user_materials.find_by(user_id: current_user.id, role: "owner")
+        redirect_to root_path, notice: 'No tiene permiso.'
+      end
+    end
+
+    def validate_public
+      if @material.public_level == 0 
+        unless @material.user_materials.find_by(user_id: current_user.id)
+          redirect_to root_path, notice: 'No tiene permiso.'
+        end
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
