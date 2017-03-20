@@ -6,17 +6,17 @@
     <%= f.hidden_field :photo_cache %>
 
   <div class="input-profile">
-    <%= f.text_field :first_name, autocomplete:false, class:'ifirst' %>
+    <%= f.text_field :first_name, autocomplete:false, class:'ifirst', required: true %>
     <%= f.label :Nombre %>
   </div>
 
   <div class="input-profile isecond">
-    <%= f.text_field :last_name, autocomplete:false %>
+    <%= f.text_field :last_name, autocomplete:false, required: true %>
     <%= f.label :Apellido %>
   </div>
 
   <div class="input-profile large">
-    <%= f.email_field :email , placeholder:'Email', autocomplete: 'off'%> 
+    <%= f.email_field :email , placeholder:'Email', autocomplete: 'off', required: true%> 
     <%= f.label :email %>
   </div>
 
