@@ -13,8 +13,6 @@ gem 'devise'
 gem 'cocoon'
 gem 'carrierwave'
 gem 'fog'
-gem 'kaminari'
-#gem 'cancancan'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server

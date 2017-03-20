@@ -43,20 +43,30 @@
 </script>
 
 <section class="comments-cont">	  
-
 	<h2>Comentarios de <b><%= @material.title %></b></h2>
 
 	<div class="cont-comm">
-
 		<div class="comment">
-			<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur reprehenderit, eveniet assumenda molestiae, consectetur officiis atque unde sapiente ipsa! Nam libero accusamus quidem, rem doloribus debitis quia velit facilis ex?</div>
-			<div class="author">Juan Pablo nunez</div>
-
-		</div>
-
+			<% @user_materials.each do |umaterial|%>
+				<% @comments = umaterial.comments %>
+				<% @comments.each do |comment| %>
+					<div class="content"><%= comment.content %></div>
+					<% u = User.find(comment.user_material.user_id) %>
+					<div class="author"><%= u.first_name %> <%= u.last_name %> - <%= comment.created_at.strftime("%d %b. %Y %H:%M") %></div>
+				<% end %>
+			<% end %>
+		
+		<%= form_tag material_add_comment_path(@material), method: :post do %>
+			<input type="text" name="comment" placeholder="Ingresar comentario..." autocomplete="off">
+    		<button>Comentar</button>
+		<% end -%>
+</div>
 	</div>
 
-	<div class="close-comment"></div>
+
+
+	
+<div class="close-comment"></div>
 	
 </section>
 

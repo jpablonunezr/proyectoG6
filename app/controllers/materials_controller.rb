@@ -14,13 +14,11 @@ class MaterialsController < ApplicationController
 
   def all
     if params[:find].present?
-      @materials = Material.where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%").order('updated_at DESC').page(params[:page])
+      @materials = Material.where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%")
     else
-      @materials = Material.where(public_level: 1).order('updated_at DESC').page(params[:page])
+      @materials = Material.where(public_level: 1).order('updated_at DESC')
     end
   end
-
-
 
   # GET /materials/1
   # GET /materials/1.json
@@ -39,10 +37,15 @@ class MaterialsController < ApplicationController
     unless @material.questions.any?
      @question = @material.questions.build()
      @question.alternatives.build
-   end
+    end
+    @user_materials = UserMaterial.where(material_id: @material.id).order('updated_at DESC')
   end
 
-  
+  def add_comment
+    @user_material = UserMaterial.find_by(material_id: params[:material_id], user_id: current_user.id)
+    @user_material.comments.build(content: params[:comment]).save
+    redirect_to root_path, notice: 'Comment was successfully created.'
+  end
 
   # POST /materials
   # POST /materials.json
@@ -55,7 +58,7 @@ class MaterialsController < ApplicationController
         format.json { render :show, status: :created, location: @material }
         format.js
       else
-        format.html { redirect_to root_path, notice: 'vali hongo' }
+        format.html { redirect_to root_path, notice: 'Error.' }
         format.json { render json: @material.errors, status: :unprocessable_entity }
         format.js
       end
