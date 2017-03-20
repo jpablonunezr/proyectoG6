@@ -1184,7 +1184,7 @@ html{
 
 .btn-save{
 	bottom:120px;
-	background:url('save.svg') no-repeat center/43% $main;
+	background:url('save2.svg') no-repeat center/43% $main;
 }
 
 .btn-save:hover,
@@ -1197,7 +1197,7 @@ html{
 
 .btn-print{
 	bottom:170px;
-	background:url('printer.svg') no-repeat center/22px $main;
+	background:url('printer2.svg') no-repeat center/22px $main;
 }
 
 
@@ -1273,6 +1273,8 @@ html{
 	display:flex;
 	height:auto;
 	width:100%;
+	flex-flow: row;
+	flex-wrap: wrap;
 }
 
 .user-view{
@@ -1282,7 +1284,7 @@ html{
 	background:#fff;
 	padding:20px;
 	box-sizing:border-box;
-	margin:0 20px 0 0;
+	margin:0 20px 20px 0;
 	box-shadow:$shadow-soft;
 
 	div{
@@ -1358,6 +1360,9 @@ html{
 					.Ingles::after{content:'ing'}				
 					.Religión::after{content:'rel'}
 					.Psicología::after{content:'psi'}
+
+					.Medio::after{content:'med'}
+					.Básico::after{content:'bas'}
 
 					
 					.Lenguaje{background-color:$len;}
@@ -1460,6 +1465,9 @@ html{
 					.Religión::after{content:'rel'}
 					.Psicología::after{content:'psi'}
 
+					.Medio::after{content:'med'}
+					.Básico::after{content:'bas'}
+
 					
 					.Lenguaje{background-color:$len;}
 					.Matemática{background-color:$mat;}
@@ -1473,6 +1481,79 @@ html{
 					.Psicología{background-color:$psi;}
 
 				
+
+
+}
+
+
+
+.btn-comments{
+	bottom:220px;
+	background:url('comment2.svg') no-repeat center/50% $main;
+}
+
+
+
+.comments-cont{
+	position:fixed;
+	top:0;
+	right:0;
+	height:100%;
+	background:$main;
+	z-index:100;
+	width:600px;
+	box-sizing:border-box;
+	padding:50px;
+	transition:$transition-2;
+	transform:translate3d(600px,0,0);
+
+	h2{
+		color:#fff;
+		text-align:center;
+		font-size:27px;
+	}
+
+	.close-comment{
+		position:absolute;
+		width:25px;
+		height:25px;
+		border-radius:100%;
+		background:url('close.svg') no-repeat center/12px #fff;
+		right:20px;
+		top:20px;
+		box-shadow:$shadow-soft;
+		cursor: pointer;
+	}
+
+	/*
+	.btn-search{
+		margin:50px auto 0 auto;
+	}
+	*/
+
+	.cont-comm{
+		width:90%;
+		margin:30px auto;
+
+		.content{
+			background:#fff;
+			box-sizing:border-box;
+			padding:15px;
+			font-size:12px;
+			border-radius:10px 10px 0 10px;
+			box-shadow:$shadow-soft;
+			}
+
+		.author{
+			color:#fff;
+
+		}
+
+	}
+
+
+
+
 
 
 }

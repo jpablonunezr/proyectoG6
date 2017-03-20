@@ -6,9 +6,11 @@
 		<div class="desactive-fullscreen"></div>
 	</div>
 
-	<div class="btn-round btn-print" onClick="javascript:window.print();">
-	</div>
+	<div class="btn-round btn-print" onClick="javascript:window.print();"></div>	
+	<div class="btn-round btn-comments"></div>
 </div>
+
+
 
 <% unless @material.updated_by.nil?  %>
 <section class="user-update">
@@ -37,5 +39,29 @@
 		setTimeout( function(){	$('header').css({'transform': 'translate3d(0,0,0)'});},100);
 	});
 
+
+</script>
+
+<section class="comments-cont">	  
+
+	<h2>Comentarios de <b><%= @material.title %></b></h2>
+
+	<div class="cont-comm">
+
+		<div class="comment">
+			<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur reprehenderit, eveniet assumenda molestiae, consectetur officiis atque unde sapiente ipsa! Nam libero accusamus quidem, rem doloribus debitis quia velit facilis ex?</div>
+			<div class="author">Juan Pablo nunez</div>
+
+		</div>
+
+	</div>
+
+	<div class="close-comment"></div>
+	
+</section>
+
+<script type='text/javascript'>
+	$(".btn-comments").click(function(){$('.comments-cont').css({'transform': 'translate3d(0,0,0)'});});
+	$(".close-comment").click(function(){$('.comments-cont').css({'transform': 'translate3d(600px,0,0)'});});
 
 </script>
