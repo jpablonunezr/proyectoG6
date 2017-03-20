@@ -12,6 +12,14 @@ class UsersController < ApplicationController
   def show
   end
 
+  def collaborate
+    if params[:filter].present?
+      @users = User.where("lower(first_name) like ? OR lower(last_name) like ? OR lower(email) like ?", "%#{params[:filter].downcase}%", "%#{params[:filter].downcase}%", "%#{params[:filter].downcase}%").order(:last_name)
+    else
+      @users = User.all
+    end 
+  end
+
 
   private
   # Never trust parameters from the scary internet, only allow the white list through.

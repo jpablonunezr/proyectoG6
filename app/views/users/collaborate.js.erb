@@ -1,0 +1,4 @@
+$("#user").html("");
+<% @users.each do |user| %>
+$("#user").append("<%= j render 'collaborate', user: user %>");
+<% end %>
