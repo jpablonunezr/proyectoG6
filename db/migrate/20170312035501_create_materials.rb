@@ -7,7 +7,6 @@ class CreateMaterials < ActiveRecord::Migration[5.0]
       t.datetime :updated_at
       t.integer :updated_by
       t.integer :public_level
-      t.integer :owner
 
       t.timestamps
     end
