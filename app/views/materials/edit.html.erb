@@ -57,6 +57,15 @@
 			<% end %>
 		</div>
 	</div>
+	
+
+	  
+	<button id="new-comment">Nuevo Comentario</button>
+	<div id="resultado">
+		<%#= render 'lista_post', posts: @posts %>
+	</div>
+
+	
 
 	<div class="close-comment"></div>
 	
@@ -66,4 +75,14 @@
 	$(".btn-comments").click(function(){$('.comments-cont').css({'transform': 'translate3d(0,0,0)'});});
 	$(".close-comment").click(function(){$('.comments-cont').css({'transform': 'translate3d(600px,0,0)'});});
 
+</script>
+<script>
+	$('#new-comment').on('click', function() {
+		$.ajax({
+			url: '<%= edit_material_path %>',
+			type: 'GET',
+			dataType: 'script',
+			data: {title: title}
+		});		
+	});
 </script>

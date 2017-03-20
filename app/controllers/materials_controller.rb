@@ -39,11 +39,15 @@ class MaterialsController < ApplicationController
     unless @material.questions.any?
      @question = @material.questions.build()
      @question.alternatives.build
-   end
+    end
     @user_materials = UserMaterial.where(material_id: @material.id).order('updated_at DESC')
+    
+    if params[:title].present?
+      @user_material = UserMaterial.find_by(material_id: params[:id], user_id: current_user.id)
+      @comment = @user_material.comments.build(content: params[:title])
+    end
+    @comments = Comment.all
   end
-
-  
 
   # POST /materials
   # POST /materials.json

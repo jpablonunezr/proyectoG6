@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activeadmin/activeadmin.git
-  revision: 7461a55e8c367cb6546c96ed7bfb90c952da2eb5
+  revision: c22973709cba23f953a584c388f21edd5f616652
   specs:
     activeadmin (1.0.0.pre5)
       arbre (~> 1.0, >= 1.0.2)
@@ -266,7 +266,7 @@ GEM
       thor (>= 0.14, < 2.0)
     jquery-ui-rails (6.0.1)
       railties (>= 3.2.16)
-    json (2.0.3)
+    json (1.8.6)
     kaminari (1.0.1)
       activesupport (>= 4.1.0)
       kaminari-actionview (= 1.0.1)
@@ -410,7 +410,6 @@ DEPENDENCIES
   fog
   jbuilder (~> 2.5)
   jquery-rails
-  kaminari
   listen (~> 3.0.5)
   pg (~> 0.18)
   pry-rails
