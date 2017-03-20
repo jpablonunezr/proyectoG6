@@ -3,9 +3,10 @@
 <head>
   <title>Proyecto G6</title>
   <%= csrf_meta_tags %>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet"> 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <link rel="stylesheet" href="/assets/print.css" media="print">
 </head>
 
 <body>
@@ -15,6 +16,58 @@
     <section class="cont-main">
      <%= yield %>      
     </section>
+
+<div class="shadow-box"></div>
+<div class="shadow-box-2"></div>
   </main>
 </body>
 </html>
+
+
+<script type='text/javascript'>
+  
+$('header .edit-profile').click(function() {
+    $('body').css({'overflow-x':'hidden'});
+    $('.acc').css({'height':'170px'});
+    $('.edit-content, .btn-upload').show(0); 
+    $('header').addClass('user-edit');    
+    $('.edit-content').addClass('edit-on');
+    $('main').addClass('main-edit-on');
+   $('.shadow-box-2').fadeIn(200);
+   $('.material').addClass('material-off');
+   $('.copy-right, .logout, .acc h4, .acc h5').addClass('footer-edit-on');  
+   $('.ifirst').focus(); 
+});
+  
+
+$(document).keyup(function(e) {
+if (e.keyCode == 27) {
+    $('header').removeClass('user-edit');    
+    $('.acc').css({'height':'auto'});  
+    $('.edit-content, .btn-upload').hide(0); 
+    $('.edit-content').removeClass('edit-on');
+    $('main').removeClass('main-edit-on');  
+   $('.shadow-box-2').fadeOut(200);
+   $('.material').removeClass('material-off');
+   $('.copy-right, .logout, .acc h4, .acc h5').removeClass('footer-edit-on');
+   $('body').css({'overflow-x':'auto'});
+}
+});
+
+
+
+$('.shadow-box-2').click(function() {
+  $('header').removeClass('user-edit');
+  $('.acc').css({'height':'auto'});  
+  $('.edit-content').hide(0); 
+  $('.edit-content').removeClass('edit-on');
+  $('main').removeClass('main-edit-on');  
+  $('.shadow-box-2').fadeOut(200);
+  $('.material').removeClass('material-off');
+  $('.copy-right, .logout, .acc h4, .acc h5').removeClass('footer-edit-on');
+});
+
+  
+
+
+</script>

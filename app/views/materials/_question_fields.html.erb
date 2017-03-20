@@ -1,15 +1,19 @@
-<div class="nested-fields">
-	<fieldset>
-	  <%= f.label :content, "Pregunta" %> <br />
-	  <%= f.text_area :content %> <br />
-	  <%#= f.check_box :_destroy %>
-	  <%= link_to_remove_association "Eliminar Pregunta", f %>
-	  <%#= f.label :_destroy, "Eliminar" %>
-	  <%= f.fields_for :alternatives do |builder| %>
-	      <%= render 'alternative_fields', f: builder %>
-	  <%end %>
-	  <div class="links">
-    	<%= link_to_add_association "Agregar Alternativa", f, :alternatives %>
-  	</div> 
-	</fieldset>
-</div>
+
+	<li class="nested-question nested-fields nested-cont">
+		<fieldset>
+		  <%= f.text_area :content, class:'question', placeholder:'Pregunta...' %>
+		  <%#= f.check_box :_destroy %>
+		  <%= link_to_remove_association "", f, class:'question-delete' %>
+		  <%#= f.label :_destroy, "Eliminar" %>
+		  <%= f.fields_for :alternatives do |builder| %>
+		      <%= render 'alternative_fields', f: builder %>
+		  <%end %>
+		  <div class="alternative-add">
+	    	<%= link_to_add_association 'agregar alternativa', f, :alternatives %>
+	  	</div> 
+		</fieldset>
+
+	</li>
+
+
+

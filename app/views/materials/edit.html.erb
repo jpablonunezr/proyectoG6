@@ -1,4 +1,32 @@
 <div class="proyect-cont">
-<%= render 'form', material: @material %>
+	<%= render 'form', material: @material %>
+
+	<div class="btn-round btn-fullscreen">
+		<div class="active-fullscreen"></div>
+		<div class="desactive-fullscreen"></div>
+	</div>
+
+	<div class="btn-round btn-print" onClick="javascript:window.print();">
+	</div>
 </div>
 
+<script type='text/javascript'>
+
+	$(".active-fullscreen").click(function(){
+		$('.desactive-fullscreen').show();
+		$(this).hide();
+		$('.btn-fullscreen').addClass('fullscreen-on');
+		$('main').css({'left': '0', 'width':'100vw'});
+		setTimeout( function(){	$('header').css({'transform': 'translate3d(-15vw,0,0)'});},100);
+	});
+
+	$(".desactive-fullscreen").click(function(){
+		$(this).hide();		
+		$('.active-fullscreen').show()
+		$('.btn-fullscreen').removeClass('fullscreen-on');
+		$('main').css({'left': '15%', 'width':'85vw'});
+		setTimeout( function(){	$('header').css({'transform': 'translate3d(0,0,0)'});},100);
+	});
+
+
+</script>

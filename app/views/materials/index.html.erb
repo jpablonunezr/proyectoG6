@@ -5,13 +5,6 @@
  </div>
 </form>
 
-<form action="<%= all_materials_path %>">
-<div class="btn-search">    
-    <input type="text" name="find" placeholder="Buscar materiales..." autocomplete="off">
-    <button></button>
- </div>
-</form>
-
 <section class="material">
   <h1>Mis Materiales</h1>
   <div class="cont-material">
@@ -38,8 +31,6 @@
 
 </section>
 
-<div class="shadow-box"></div>
-<div class="shadow-box-2"></div>
 
 <%#= link_to '', new_material_path, class:'btn-round btn-new' %>
 
@@ -52,6 +43,13 @@
 
 </div>
 
+<div class="btn-round btn-search-user">
+  <div class="btn-action-2"></div>
+<form action="<%= all_materials_path %>">  
+    <input type="text" name="find" placeholder="Buscar materiales..." autocomplete="off">
+    <button></button>
+</form>
+</div>
 
 <script type='text/javascript'>
 //$('.material-create-cont').hide();
@@ -73,41 +71,31 @@ $('.btn-action').click(function() {
 
 $(document).keyup(function(e) {
   if (e.keyCode == 27) {
-   $('.btn-action').show();
+   $('.btn-action, .btn-action-2').show();
    $('.shadow-box').fadeOut(200);
    $('.material').removeClass('material-off');
    $('.material-create-cont').hide();
    $('.btn-new').removeClass('btn-open');
    setTimeout( function(){
     $('.material-create-cont').removeClass('material-open');
+   $('.btn-search-user').removeClass('user-search-on');
   },100);  
  }
 });
 
 
 $('.shadow-box').click(function() {
- $('.btn-action').show();
+ $('.btn-action, .btn-action-2').show();
  $('.shadow-box').fadeOut(200);
  $('.material').removeClass('material-off');
  $('.material-create-cont').hide();
  $('.btn-new').removeClass('btn-open');
  setTimeout( function(){
   $('.material-create-cont').removeClass('material-open');
+   $('.btn-search-user').removeClass('user-search-on');
 },100);  
 });
 
-
-
-$('.shadow-box-2').click(function() {
-  $('header').removeClass('user-edit');
-  $('.acc').css({'height':'auto'});  
-  $('.edit-content').hide(0); 
-  $('.edit-content').removeClass('edit-on');
-  $('main').removeClass('main-edit-on');  
-  $('.shadow-box-2').fadeOut(200);
-  $('.material').removeClass('material-off');
-  $('.copy-right, .logout, .acc h4, .acc h5').removeClass('footer-edit-on');
-});
 
 $('.btn-search input').focusin(function() {
    $('.btn-search').addClass('search-on');
@@ -117,4 +105,15 @@ $('.btn-search input').focusout(function() {
    $('.btn-search').removeClass('search-on');
  });
 
+
+$('.btn-action-2').click(function() {
+   $('.btn-search-user').addClass('user-search-on');
+   $(this).hide();
+   $('.shadow-box').fadeIn(200);
+   $('.btn-search-user input').focus();
+
+ });
+
+
 </script>
+
