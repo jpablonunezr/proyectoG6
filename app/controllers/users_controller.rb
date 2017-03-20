@@ -10,7 +10,7 @@ class UsersController < ApplicationController
 
   private
   # Never trust parameters from the scary internet, only allow the white list through.
-  def question_params
+  def user_params
     params.require(:user).permit(:email, :first_name, :last_name, :subject_id, :level_id)
   end
 end

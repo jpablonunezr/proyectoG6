@@ -20,6 +20,15 @@
     <%= f.label :email %>
 </div>
 
+<div class="field">
+  <%= f.label :subject %>
+  <%= collection_select :subjects, :subject_id, Subject.all, :id, :name %>
+  <%#= select_tag(:subjects, options_for_select(Subject.all, :name)) %>
+
+<%#= collection_select(:person, :city_id, City.all, :id, :name) %>
+
+</div>
+
 
 
 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
