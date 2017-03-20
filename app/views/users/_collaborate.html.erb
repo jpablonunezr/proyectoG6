@@ -1,7 +1,9 @@
-<tr>
-    <td><%= user.first_name %> <%= user.last_name %></td>
-    <td><%= user.email %></td>
-    <td><%= user.subject.name %></td>
-    <td><%= user.level.name %></td>
-
-</tr>
+<section class="user-view">
+    <div class="pic" style="background-image:url('<%= user.photo %>')"></div>
+    <div class="name"><%= user.first_name %> <%= user.last_name %></div>    
+    <div class="email"><%= user.email %></div>
+    <div class="contain-skills">
+        <div class="material-subject <%= user.subject.name %>"></div>
+        <div class="level <%= user.level.name %>"></div> 
+    </div>     
+</section>
