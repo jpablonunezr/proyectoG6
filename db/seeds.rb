@@ -31,11 +31,11 @@ end
 end
 
 12.times do |i|
-  u = User.create(first_name: "#{@first_name[i]}", last_name: "#{@last_name[i]}", password:'123456', email: "#{@first_name[i]}.#{@last_name[i]}@gmail.com", level_id: rand(1..15), subject_id: rand(1..11))
+  User.create(first_name: "#{@first_name[i]}", last_name: "#{@last_name[i]}", password:'123456', email: "#{@first_name[i]}.#{@last_name[i]}@gmail.com", level_id: rand(1..15), subject_id: rand(1..11))
   2.times do |a|
     m = Material.create!(title:"Proyecto #{a}", description:'Lorem ipsum dolor sit amet.', level_id: rand(1..15), subject_id: rand(1..11), public_level: rand(0..1))
-    m.user_materials.build(user_id: u.id, role: "owner").save
-    m.user_materials.build(user_id: u.id, role: "collaborator").save
+    m.user_materials.build(user_id: rand(1..12), role: "owner").save
+    m.user_materials.build(user_id: rand(1..12), role: "collaborator").save
   end
 end
 
