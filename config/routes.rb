@@ -19,6 +19,9 @@ Rails.application.routes.draw do
     collection do
       get 'collaborate'
     end
+    member do
+      get 'add_collaborate'
+    end
   end
   
   root 'materials#index'

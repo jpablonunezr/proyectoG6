@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   end
 
   def collaborate
+    #@user_materials = UserMaterial.where(user_id: current_user.id)
     if params[:filter].present?
       @users = User.where("lower(first_name) like ? OR lower(last_name) like ? OR lower(email) like ?", "%#{params[:filter].downcase}%", "%#{params[:filter].downcase}%", "%#{params[:filter].downcase}%").order(:last_name)
     else
@@ -20,11 +21,16 @@ class UsersController < ApplicationController
     end 
   end
 
+  def add_collaborate
+      UserMaterial.create(material_id: params[:title_id], user_id: params[:id], role: "collaborator")
+      redirect_to collaborate_users_path, notice: 'Collaborator was successfully updated.'
+  end
+
 
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :subject_id, :level_id)
+    params.require(:user).permit(:email, :first_name, :last_name, :subject_id, :level_id, :title_id)
   end
 
   def set_user

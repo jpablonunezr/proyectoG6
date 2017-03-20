@@ -1,5 +1,8 @@
-<input name="buscador">
-
+<div><input name="buscador"></div>
+<tr>
+<td>Seleccione el proyecto a modificar:</td>
+<td><%= collection_select(:id, :title, current_user.materials, :id, :title)%></td>
+</tr>
 <table>
   <tbody id="user">
     <% @users.each do |user| %>
