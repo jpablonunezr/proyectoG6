@@ -2,7 +2,7 @@
 
 <section class="user-profile">
     <div class="pic" style="background-image:url('<%= @user.photo %>')"></div>
-    <div class="name"><%= @user.last_name %> <%= @user.last_name %></div>    
+    <div class="name"><%= @user.first_name %> <%= @user.last_name %></div>    
     <div class="email"><%= @user.email %></div>
     <div class="contain-skills">
         <div class="material-subject <%= Subject.find(@user.subject).name %>"></div>
