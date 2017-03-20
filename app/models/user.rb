@@ -7,7 +7,7 @@ class User < ApplicationRecord
   has_many :user_networks, dependent: :destroy
   has_many :user_materials, dependent: :destroy
 	has_many :networks, through: :user_networks
-  has_many :materials, through: :user_material
+  has_many :materials, through: :user_materials
   belongs_to :level
   belongs_to :subject
   mount_uploader :photo, PhotoUploader
