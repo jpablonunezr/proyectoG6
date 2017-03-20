@@ -5,5 +5,8 @@
     <div class="contain-skills">
         <div class="material-subject <%= user.subject.name %>"></div>
         <div class="level <%= user.level.name %>"></div> 
-    </div>     
+    </div>
+    <div>
+    <a href="<%= add_collaborate_user_path(user.id)%>">Agregar usuario</a>    
+    </div>    
 </section>
