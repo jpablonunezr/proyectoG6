@@ -4,38 +4,31 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
-<<<<<<< HEAD
 .env
 !*.env
-=======
 *.env
 .env
 !*.env
 env
->>>>>>> 08ce05db4d05b1f681800ffc2664167d70c6c12a
+/.env
 
 # Ignore bundler config.
 /.bundle
 .env
 !*.env
-<<<<<<< HEAD
-=======
 *.env
 env 
->>>>>>> 08ce05db4d05b1f681800ffc2664167d70c6c12a
+
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-<<<<<<< HEAD
-=======
 *.env
 .env
 !*.env
 env
->>>>>>> 08ce05db4d05b1f681800ffc2664167d70c6c12a
 
 # Ignore Byebug command history file.
 .byebug_history
