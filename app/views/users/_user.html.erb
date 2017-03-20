@@ -1,16 +1,14 @@
-<tr>
-    <td><%= user.first_name %></td>
-    <td><%= user.last_name %></td>
-    <td><%= user.email %></td>
-    <td><% unless user.subject.nil? %>
-    	<%= user.subject.name %>
-    	<% end %>
-   	</td>
-    <td><% unless user.level.nil? %>
-    	<%= user.level.name %>
-    	<% end %>
-   	</td>   
-</tr>
+<a href="<%= user_path(user) %>">
+<section class="user-view">
+    <div class="pic" style="background-image:url('<%= user.photo %>')"></div>
+    <div class="name"><%= user.last_name %> <%= user.last_name %></div>    
+    <div class="email"><%= user.email %></div>
+    <div class="contain-skills">
+        <div class="material-subject <%= user.subject.name %>"></div>
+        <div class="level <%= user.level.name %>"></div> 
+    </div>     
+</section>
+</a> 
 
 
 

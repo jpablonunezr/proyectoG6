@@ -1,38 +1,21 @@
-<p id="notice"><%= notice %></p>
+<div class="cont-user-show">
 
-<p>
-  <strong>Nombre:</strong>
-  <%= "#{@user.first_name}" "#{@user.last_name}" %>
-</p>
+<section class="user-profile">
+    <div class="pic" style="background-image:url('<%= @user.photo %>')"></div>
+    <div class="name"><%= @user.last_name %> <%= @user.last_name %></div>    
+    <div class="email"><%= @user.email %></div>
+    <div class="contain-skills">
+        <div class="material-subject <%= Subject.find(@user.subject).name %>"></div>
+        <div class="level <%= Level.find(@user.level_id).name %>"></div> 
+    </div>  
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-
-<p>
-  <strong>Foto:</strong>
-  <%= @user.photo %>
-</p>
-
-<p>
-  <strong>Nivel:</strong>
-  <%= Level.find(@user.level_id).name %>
-</p>
-
-<p>
-  <strong>Asignatura</strong>
-  <%= Subject.find(@user.subject).name %>
-</p>
-
-<p>
-  <strong>Materiales</strong>
   <% @user.materials.where(public_level: 1).each do |material| %>
-  <tr>
-    <td><%= material.title %></td>
-    <td><%= material.description %></td>
-  </tr>
+  <div><%= material.title %></div>
+  <div><%= material.description %></div>
   <% end %>
-</p>
+   
+</section>
 
-<%= link_to 'Back', materials_path %>
+
+
+</div>
