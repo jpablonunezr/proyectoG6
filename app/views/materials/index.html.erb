@@ -1,4 +1,4 @@
-<form action="<%= users_index_path %>">
+<form action="<%= users_path %>">
 <div class="btn-search">    
     <input type="text" name="search" placeholder="Buscar usuarios..." autocomplete="off">
     <button></button>
@@ -38,6 +38,8 @@
 
 </section>
 
+<div class="shadow-box"></div>
+<div class="shadow-box-2"></div>
 
 <%#= link_to '', new_material_path, class:'btn-round btn-new' %>
 
@@ -49,9 +51,6 @@
   </div>
 
 </div>
-
-<div class="shadow-box"></div>
-<div class="shadow-box-2"></div>
 
 
 <script type='text/javascript'>
@@ -100,13 +99,13 @@ $('.shadow-box').click(function() {
 
 
 $('.shadow-box-2').click(function() {
-  $('header').removeClass('user-edit');  
+  $('header').removeClass('user-edit');
+  $('.acc').css({'height':'auto'});  
   $('.edit-content').hide(0); 
   $('.edit-content').removeClass('edit-on');
   $('main').removeClass('main-edit-on');  
   $('.shadow-box-2').fadeOut(200);
   $('.material').removeClass('material-off');
-  $('body').css({'overflow-x':'auto'});
   $('.copy-right, .logout, .acc h4, .acc h5').removeClass('footer-edit-on');
 });
 

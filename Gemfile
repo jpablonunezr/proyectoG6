@@ -10,6 +10,8 @@ end
 gem 'rails', '~> 5.0.2'
 gem 'devise'
 gem 'cocoon'
+gem 'carrierwave'
+gem 'fog'
 #gem 'cancancan'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
@@ -45,6 +47,8 @@ group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'dotenv-rails'
+
 end
 
 group :development do
