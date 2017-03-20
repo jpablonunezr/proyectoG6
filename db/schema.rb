@@ -107,8 +107,8 @@ ActiveRecord::Schema.define(version: 20170320003322) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "photo"
-    t.integer  "level_id"
-    t.integer  "subject_id"
+    t.integer  "level_id",               default: 1
+    t.integer  "subject_id",             default: 1
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["level_id"], name: "index_users_on_level_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
