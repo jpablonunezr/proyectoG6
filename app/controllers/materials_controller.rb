@@ -41,10 +41,10 @@ class MaterialsController < ApplicationController
     @user_materials = UserMaterial.where(material_id: @material.id).order('updated_at DESC')
   end
 
-  def add_comment
+  def add_comment    
     @user_material = UserMaterial.find_by(material_id: params[:material_id], user_id: current_user.id)
-    @user_material.comments.build(content: params[:comment]).save
-    redirect_to root_path, notice: 'Comment was successfully created.'
+    a = @user_material.comments.build(content: params[:comment]).save
+    redirect_to root_path    
   end
 
   # POST /materials
@@ -71,7 +71,7 @@ class MaterialsController < ApplicationController
     respond_to do |format|
       @material.updated_by = current_user.id
       if @material.update_attributes(material_params)
-        format.html { redirect_to @material, notice: 'Material was successfully updated.' }
+        format.html { redirect_to edit_material_path(@material), notice: "Tu material fue actualizado."   }
         format.json { render :show, status: :ok, location: @material }
         format.js
       else

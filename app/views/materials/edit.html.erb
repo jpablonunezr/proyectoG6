@@ -1,3 +1,4 @@
+<div class="notice"><%= notice %></div>
 <div class="proyect-cont">
 	<%= render 'form', material: @material %>
 
@@ -9,8 +10,6 @@
 	<div class="btn-round btn-print" onClick="javascript:window.print();"></div>	
 	<div class="btn-round btn-comments"></div>
 </div>
-
-
 
 <% unless @material.updated_by.nil?  %>
 <section class="user-update">
@@ -46,28 +45,28 @@
 	<h2>Comentarios de <b><%= @material.title %></b></h2>
 
 	<div class="cont-comm">
+
+		<%= form_tag(material_add_comment_path(@material), method: :get) do  %>
 		<div class="comment">
+
 			<% @user_materials.each do |umaterial|%>
-				<% @comments = umaterial.comments %>
-				<% @comments.each do |comment| %>
-					<div class="content"><%= comment.content %></div>
-					<% u = User.find(comment.user_material.user_id) %>
-					<div class="author"><%= u.first_name %> <%= u.last_name %> - <%= comment.created_at.strftime("%d %b. %Y %H:%M") %></div>
-				<% end %>
+			<%= render 'comments', umaterial: umaterial %>				
 			<% end %>
-		
-		<%= form_tag material_add_comment_path(@material), method: :post do %>
-			<input type="text" name="comment" placeholder="Ingresar comentario..." autocomplete="off">
-    		<button>Comentar</button>
-		<% end -%>
-</div>
+
+		</div>
+			
+			<center><input type="text" name="comment" placeholder="Ingresar comentario..." autocomplete="off" maxlength="60" required="true"></center>
+    		<button type="submit">Comentar</button>
+		<% end %>
 	</div>
 
 
 
 	
-<div class="close-comment"></div>
+	<div class="close-comment"></div>
 	
+
+
 </section>
 
 <script type='text/javascript'>
