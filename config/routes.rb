@@ -11,8 +11,7 @@ Rails.application.routes.draw do
         registrations: 'users/registrations'
       }
 
-  get 'users/index'
-  
+  resources :users, only: :index
   
   root 'materials#index'
 

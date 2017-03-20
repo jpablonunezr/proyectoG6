@@ -3,7 +3,7 @@
 	<% if user_signed_in? %>
 	<nav>
 		<div class="acc">
-			<div class="img-profile"></div>
+			<div class="img-profile" style="background-image:url(<%= current_user.photo %>)"></div>
 			<h4><%= current_user.first_name %> <%= current_user.last_name %></h4>
 			<h5><%= current_user.email %> </h5>
 			<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Cerrar sesión</a>			
@@ -34,7 +34,8 @@
 	
 $('header .edit-profile').click(function() {
     $('body').css({'overflow-x':'hidden'});
-    $('.edit-content').show(0); 
+    $('.acc').css({'height':'170px'});
+    $('.edit-content, .btn-upload').show(0); 
     $('header').addClass('user-edit');    
     $('.edit-content').addClass('edit-on');
     $('main').addClass('main-edit-on');
@@ -47,8 +48,9 @@ $('header .edit-profile').click(function() {
 
 $(document).keyup(function(e) {
 if (e.keyCode == 27) {
-    $('header').removeClass('user-edit');  
-    $('.edit-content').hide(0); 
+    $('header').removeClass('user-edit');    
+    $('.acc').css({'height':'auto'});  
+    $('.edit-content, .btn-upload').hide(0); 
     $('.edit-content').removeClass('edit-on');
     $('main').removeClass('main-edit-on');  
    $('.shadow-box-2').fadeOut(200);

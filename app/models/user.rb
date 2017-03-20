@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :subjects, through: :user_subjects
   has_many :levels, through: :user_levels
 	has_many :networks, through: :user_networks
-  has_many :materials, through: :user_materials
+  has_many :materials, through: :user_material
+
+  mount_uploader :photo, PhotoUploader
 
 end
