@@ -14,9 +14,9 @@ class MaterialsController < ApplicationController
 
   def all
     if params[:find].present?
-      @materials = Material.where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%").order('updated_at DESC').page(params[:page])
+      @materials = Material.where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%")
     else
-      @materials = Material.where(public_level: 1).order('updated_at DESC').page(params[:page])
+      @materials = Material.where(public_level: 1).order('updated_at DESC')
     end
   end
 
@@ -40,6 +40,7 @@ class MaterialsController < ApplicationController
      @question = @material.questions.build()
      @question.alternatives.build
    end
+    @user_materials = UserMaterial.where(material_id: @material.id).order('updated_at DESC')
   end
 
   
@@ -55,7 +56,7 @@ class MaterialsController < ApplicationController
         format.json { render :show, status: :created, location: @material }
         format.js
       else
-        format.html { redirect_to root_path, notice: 'vali hongo' }
+        format.html { redirect_to root_path, notice: 'Error.' }
         format.json { render json: @material.errors, status: :unprocessable_entity }
         format.js
       end
