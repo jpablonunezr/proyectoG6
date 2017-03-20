@@ -20,8 +20,6 @@ class MaterialsController < ApplicationController
     end
   end
 
-
-
   # GET /materials/1
   # GET /materials/1.json
   def show
@@ -41,12 +39,12 @@ class MaterialsController < ApplicationController
      @question.alternatives.build
     end
     @user_materials = UserMaterial.where(material_id: @material.id).order('updated_at DESC')
-    
-    if params[:title].present?
-      @user_material = UserMaterial.find_by(material_id: params[:id], user_id: current_user.id)
-      @comment = @user_material.comments.build(content: params[:title])
-    end
-    @comments = Comment.all
+  end
+
+  def add_comment
+    @user_material = UserMaterial.find_by(material_id: params[:material_id], user_id: current_user.id)
+    @user_material.comments.build(content: params[:comment]).save
+    redirect_to root_path, notice: 'Comment was successfully created.'
   end
 
   # POST /materials

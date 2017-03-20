@@ -55,19 +55,18 @@
 					<div class="author"><%= u.first_name %> <%= u.last_name %> - <%= comment.created_at.strftime("%d %b. %Y %H:%M") %></div>
 				<% end %>
 			<% end %>
-		</div>
-	</div>
-	
-
-	  
-	<button id="new-comment">Nuevo Comentario</button>
-	<div id="resultado">
-		<%#= render 'lista_post', posts: @posts %>
+		
+		<%= form_tag material_add_comment_path(@material), method: :post do %>
+			<input type="text" name="comment" placeholder="Ingresar comentario..." autocomplete="off">
+    		<button>Comentar</button>
+		<% end -%>
+</div>
 	</div>
 
-	
 
-	<div class="close-comment"></div>
+
+	
+<div class="close-comment"></div>
 	
 </section>
 
@@ -75,14 +74,4 @@
 	$(".btn-comments").click(function(){$('.comments-cont').css({'transform': 'translate3d(0,0,0)'});});
 	$(".close-comment").click(function(){$('.comments-cont').css({'transform': 'translate3d(600px,0,0)'});});
 
-</script>
-<script>
-	$('#new-comment').on('click', function() {
-		$.ajax({
-			url: '<%= edit_material_path %>',
-			type: 'GET',
-			dataType: 'script',
-			data: {title: title}
-		});		
-	});
 </script>
