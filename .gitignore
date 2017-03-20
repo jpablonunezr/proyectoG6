@@ -4,6 +4,7 @@
 # or operating system, you probably want to add a global ignore instead:
 #   git config --global core.excludesfile '~/.gitignore_global'
 
+*.env
 .env
 !*.env
 
@@ -11,13 +12,14 @@
 /.bundle
 .env
 !*.env
+*.env
 
 # Ignore all logfiles and tempfiles.
 /log/*
 /tmp/*
 !/log/.keep
 !/tmp/.keep
-
+*.env
 .env
 !*.env
 
