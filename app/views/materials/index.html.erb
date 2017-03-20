@@ -36,11 +36,9 @@
 
 <div class='btn-round btn-new'>
   <div class="btn-action"></div>
-
   <div class="material-create-cont material--content">
     <%= render 'pre_form', material: @material %>
   </div>
-
 </div>
 
 <div class="btn-round btn-search-user">
@@ -51,69 +49,5 @@
 </form>
 </div>
 
-<script type='text/javascript'>
-//$('.material-create-cont').hide();
 
-$('.btn-action').click(function() {
-   // $("html, body").animate({scrollTop:0}, 300);
-   $('.title').focus();
-   $(this).hide();
-   $('.shadow-box').fadeIn(200);
-   $('.material').addClass('material-off');
-   $('.material-create-cont').show();
-   $('.btn-new').addClass('btn-open');
-   setTimeout( function(){
-    $('.material-create-cont').addClass('material-open');
-  },100); 
-
- });
-
-
-$(document).keyup(function(e) {
-  if (e.keyCode == 27) {
-   $('.btn-action, .btn-action-2').show();
-   $('.shadow-box').fadeOut(200);
-   $('.material').removeClass('material-off');
-   $('.material-create-cont').hide();
-   $('.btn-new').removeClass('btn-open');
-   setTimeout( function(){
-    $('.material-create-cont').removeClass('material-open');
-   $('.btn-search-user').removeClass('user-search-on');
-  },100);  
- }
-});
-
-
-$('.shadow-box').click(function() {
- $('.btn-action, .btn-action-2').show();
- $('.shadow-box').fadeOut(200);
- $('.material').removeClass('material-off');
- $('.material-create-cont').hide();
- $('.btn-new').removeClass('btn-open');
- setTimeout( function(){
-  $('.material-create-cont').removeClass('material-open');
-   $('.btn-search-user').removeClass('user-search-on');
-},100);  
-});
-
-
-$('.btn-search input').focusin(function() {
-   $('.btn-search').addClass('search-on');
- });
-
-$('.btn-search input').focusout(function() {
-   $('.btn-search').removeClass('search-on');
- });
-
-
-$('.btn-action-2').click(function() {
-   $('.btn-search-user').addClass('user-search-on');
-   $(this).hide();
-   $('.shadow-box').fadeIn(200);
-   $('.btn-search-user input').focus();
-
- });
-
-
-</script>
 

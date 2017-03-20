@@ -1,61 +1,62 @@
 <%= form_for(material) do |f| %>
-  <% if material.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(material.errors.count, "error") %> prohibited this material from being saved:</h2>
+<% if material.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(material.errors.count, "error") %> prohibited this material from being saved:</h2>
 
-      <ul>
-      <% material.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+  <ul>
+    <% material.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
 
- 
-    <%= f.text_field :title, placeholder:'Titulos', class:'title' %>  
-    <%= f.text_area :description, placeholder:'Description', maxlength:50, class:'description'  %>
- 
-  
-  <div class="field">
+
+<%= f.text_field :title, placeholder:'Titulos', class:'title' %>  
+<%= f.text_area :description, placeholder:'Description', maxlength:50, class:'description'  %>
+
+<div class="cont-test-change">
+  <div class="field input-test-change">
     <%= f.label :public_level, "Privacidad" %>
     <%= f.select(:public_level) do %>
-      <% [['Privado', 0], ['Publico', 1]].each do |c| %>
-        <%= content_tag(:option, c.first, value: c.last) %>
-      <% end %>
+    <% [['Privado', 0], ['Público', 1]].each do |c| %>
+    <%= content_tag(:option, c.first, value: c.last) %>
+    <% end %>
     <% end %>
   </div>
 
-  <div class="field">
-    <%= f.label :subject %>
+
+  <div class="field input-test-change">
+    <%= f.label :Asignatura %>
     <%= f.collection_select :subject_id, Subject.all, :id, :name %>
     <!-- Creditos a Mauro :)  -->
   </div>
 
-  <div class="field">
-    <%= f.label :level %>
+  <div class="field input-test-change">
+    <%= f.label :Nivel %>
     <%= f.collection_select :level_id, Level.all, :id, :name %>
   </div>
-  
+
+</div>
 
 
+<%= f.fields_for :questions do |builder| %>
+<%= render 'question_fields', f: builder %>
+<% end %>
 
-  <%= f.fields_for :questions do |builder| %>
-    <%= render 'question_fields', f: builder %>
-  <% end %>
 
-  
-    <div class="btn-round btn-add-question">
-      <%= link_to_add_association "", f, :questions, title:'Agregar pregunta' %>
-    </div> 
+<div class="btn-round btn-add-question">
+  <%= link_to_add_association "", f, :questions, title:'Agregar pregunta' %>
+</div> 
 
-    <%= f.submit '', class:'btn-round btn-save' %>
+<%= f.submit '', class:'btn-round btn-save' %>
 <% end %>
 
 <script type='text/javascript'>
-  
-$('.btn-add-question').click(function() {
-  $("html, body").animate({ scrollTop: $(document).height() }, 400);
-});
+
+  $('.btn-add-question').click(function() {
+    $("html, body").animate({ scrollTop: $(document).height() }, 400);
+  });
 
 
 </script>

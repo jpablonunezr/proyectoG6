@@ -10,6 +10,15 @@
 	</div>
 </div>
 
+<% unless @material.updated_by.nil?  %>
+<section class="user-update">
+	<div class="pic" style="background-image:url('<%= User.find(@material.updated_by).photo %>')"></div>
+	<div class="firstname"><%= User.find(@material.updated_by).first_name %></div>
+	<div class="lastname"><%= User.find(@material.updated_by).last_name %></div>
+	<div class="time"><%= @material.updated_at %></div>
+</section>
+<% end %>
+
 <script type='text/javascript'>
 
 	$(".active-fullscreen").click(function(){
