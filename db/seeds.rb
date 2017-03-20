@@ -6,9 +6,9 @@
 #   movies = Movie.create!([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create!(name: 'Luke', movie: movies.first)
 
-User.destroy_all
 Subject.destroy_all
 Level.destroy_all
+User.destroy_all
 
 l = Level.create!(name: 'No asignado')
 Level.create!(name:'Pre-Kínder')
@@ -62,3 +62,5 @@ end
     m.user_materials.build(user_id: u1.id, role: "collaborator").save
     m.user_materials.build(user_id: u2.id, role: "collaborator").save
 end
+
+Admin.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')

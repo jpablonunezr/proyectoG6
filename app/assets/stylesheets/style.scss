@@ -585,6 +585,7 @@ html{
 					}
 
 
+					.subject-No::after{content:'N/A'}
 					.subject-Lenguaje::after{content:'len'}
 					.subject-Matemática::after{content:'mat'}
 					.subject-Historia::after{content:'his'}
@@ -596,7 +597,7 @@ html{
 					.subject-Religión::after{content:'rel'}
 					.subject-Psicología::after{content:'psi'}
 
-
+					
 					.subject-Lenguaje{background-color:$len;}
 					.subject-Matemática{background-color:$mat;}
 					.subject-Historia{background-color:$his;}

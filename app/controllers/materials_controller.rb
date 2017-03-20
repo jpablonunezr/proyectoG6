@@ -51,7 +51,7 @@ class MaterialsController < ApplicationController
     @material.user_materials.build(role: 3, user_id: current_user.id)
     respond_to do |format|
       if @material.save
-        format.html { redirect_to root_path(@material), notice: 'Material was successfully created.' }
+        format.html { redirect_to edit_material_path(@material), notice: 'Material was successfully created.' }
         format.json { render :show, status: :created, location: @material }
         format.js
       else
