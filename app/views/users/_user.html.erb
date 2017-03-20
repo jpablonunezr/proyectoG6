@@ -2,11 +2,15 @@
     <td><%= user.first_name %></td>
     <td><%= user.last_name %></td>
     <td><%= user.email %></td>
-    <td><% user.subjects.each do |subject| %>
-    <div>
-    	<%= subject.name %>
-    </div>
-    <% end %> </td>
+    <td><% unless user.subject.nil? %>
+    	<%= user.subject.name %>
+    	<% end %>
+   	</td>
+    <td><% unless user.level.nil? %>
+    	<%= user.level.name %>
+    	<% end %>
+   	</td>   
 </tr>
+
 
 

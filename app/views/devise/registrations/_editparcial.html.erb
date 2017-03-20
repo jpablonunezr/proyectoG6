@@ -8,28 +8,27 @@
   <div class="input-profile">
     <%= f.text_field :first_name, autocomplete:false, class:'ifirst' %>
     <%= f.label :Nombre %>
-</div>
+  </div>
 
-<div class="input-profile isecond">
+  <div class="input-profile isecond">
     <%= f.text_field :last_name, autocomplete:false %>
     <%= f.label :Apellido %>
-</div>
+  </div>
 
-<div class="input-profile large">
+  <div class="input-profile large">
     <%= f.email_field :email , placeholder:'Email', autocomplete: 'off'%> 
     <%= f.label :email %>
-</div>
+  </div>
 
-<div class="field">
-  <%= f.label :subject %>
-  <%= collection_select :subjects, :subject_id, Subject.all, :id, :name %>
-  <%#= select_tag(:subjects, options_for_select(Subject.all, :name)) %>
+  <div class="field">
+    <%= f.label :subject, "Asignatura" %>
+    <%= f.collection_select :subject_id, Subject.all, :id, :name %>
+  </div>
 
-<%#= collection_select(:person, :city_id, City.all, :id, :name) %>
-
-</div>
-
-
+  <div class="field">
+    <%= f.label :level, "Nivel" %>
+    <%= f.collection_select :level_id, Level.all, :id, :name %>
+  </div>
 
 <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
 <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
@@ -37,11 +36,10 @@
 
 <br>  
 
-
 <div class="msj">¿Quieres cambiar la clave?</div>
 
 <div class="hidde-pwd">
-    <div class="input-profile">
+  <div class="input-profile">
       <%= f.password_field :password, autocomplete: "off" %>
       <%= f.label :clave_nueva %>     
   </div>
@@ -52,16 +50,14 @@
 
 
   <div class="input-profile isecond">
-      <%= f.password_field :password_confirmation, autocomplete: "off" %>
-      <%= f.label :repita_clave %>
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+    <%= f.label :repita_clave %>
   </div>
 
 </div>
 
-
-
 <div class="input-profile pwd-last">
- <%= f.password_field :current_password, autocomplete: "off" %>
+ <%= f.password_field :current_password, autocomplete: "off", required: true %>
  <%= f.label :clave_actual %>
 </div>  
 

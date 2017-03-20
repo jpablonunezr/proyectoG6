@@ -1,4 +1,4 @@
-<table>
+<table id="all">
   <thead>
     <tr>
       <th>Titulo</th>
@@ -8,15 +8,13 @@
     </tr>
   </thead>
   
-  <tbody>
+  <tbody class="page">
     <% @materials.each do |material| %>
-      <tr>
-        <td><%= material.title %></td>
-        <td><%= material.description %></td>
-        <td><%= material.subject.name %></td>
-        <td><%= material.level.name %></td>  
-      </tr>
+      <%= render 'all', material: material %>
     <% end %>
   </tbody>
         
 </table>
+
+<%= paginate @materials, remote: true %>
+

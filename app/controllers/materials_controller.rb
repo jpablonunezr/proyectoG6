@@ -6,17 +6,17 @@ class MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials = current_user.user_materials.where(role: "owner").order('created_at DESC')
-    @collaborations = current_user.user_materials.where(role: "collaborator").order('created_at DESC')
+    @materials = current_user.user_materials.where(role: "owner").order('updated_at DESC')
+    @collaborations = current_user.user_materials.where(role: "collaborator").order('updated_at DESC')
     # @materials= Material.order('created_at DESC')
     @material= Material.new
   end
 
   def all
     if params[:find].present?
-      @materials = Material.where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%")
+      @materials = Material.where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%").order('updated_at DESC').page(params[:page])
     else
-      @materials = Material.where(public_level: 1)
+      @materials = Material.where(public_level: 1).order('updated_at DESC').page(params[:page])
     end
   end
 

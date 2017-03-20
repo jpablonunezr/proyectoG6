@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170319202812) do
+ActiveRecord::Schema.define(version: 20170320003322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,15 +72,6 @@ ActiveRecord::Schema.define(version: 20170319202812) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "user_levels", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "level_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["level_id"], name: "index_user_levels_on_level_id", using: :btree
-    t.index ["user_id"], name: "index_user_levels_on_user_id", using: :btree
-  end
-
   create_table "user_materials", force: :cascade do |t|
     t.integer  "material_id"
     t.integer  "user_id"
@@ -100,15 +91,6 @@ ActiveRecord::Schema.define(version: 20170319202812) do
     t.index ["user_id"], name: "index_user_networks_on_user_id", using: :btree
   end
 
-  create_table "user_subjects", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "subject_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["subject_id"], name: "index_user_subjects_on_subject_id", using: :btree
-    t.index ["user_id"], name: "index_user_subjects_on_user_id", using: :btree
-  end
-
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -125,8 +107,12 @@ ActiveRecord::Schema.define(version: 20170319202812) do
     t.string   "first_name"
     t.string   "last_name"
     t.string   "photo"
+    t.integer  "level_id"
+    t.integer  "subject_id"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["level_id"], name: "index_users_on_level_id", using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+    t.index ["subject_id"], name: "index_users_on_subject_id", using: :btree
   end
 
   add_foreign_key "alternatives", "questions"
@@ -134,12 +120,10 @@ ActiveRecord::Schema.define(version: 20170319202812) do
   add_foreign_key "materials", "levels"
   add_foreign_key "materials", "subjects"
   add_foreign_key "questions", "materials"
-  add_foreign_key "user_levels", "levels"
-  add_foreign_key "user_levels", "users"
   add_foreign_key "user_materials", "materials"
   add_foreign_key "user_materials", "users"
   add_foreign_key "user_networks", "networks"
   add_foreign_key "user_networks", "users"
-  add_foreign_key "user_subjects", "subjects"
-  add_foreign_key "user_subjects", "users"
+  add_foreign_key "users", "levels"
+  add_foreign_key "users", "subjects"
 end
