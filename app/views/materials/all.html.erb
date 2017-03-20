@@ -1,4 +1,4 @@
-<table id="all">
+<table>
   <thead>
     <tr>
       <th>Titulo</th>
@@ -8,9 +8,14 @@
     </tr>
   </thead>
   
-  <tbody class="page">
+  <tbody">
     <% @materials.each do |material| %>
-      <%= render 'all', material: material %>
+      <tr>
+        <td><%= material.title %></td>
+        <td><%= material.description %></td>
+        <td><%= material.subject.name %></td>
+        <td><%= material.level.name %></td>  
+      </tr>
     <% end %>
   </tbody>
         
