@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   	collection do
   		get 'all'
   	end
-    #get 'add_comment'
+    get 'add_comment'
 	end 
   
   devise_for :users, controllers: {
