@@ -10,9 +10,7 @@
   <div class="cont-material">
     <ul>
       <li>
-        <% @materials.each do |material| %>
-        <%= render 'material', m: material %>
-        <% end %>
+        <%= render @materials %>
       </li>
     </ul>
 
@@ -22,17 +20,12 @@
   <div class="cont-material">
    <ul>
     <li>
-      <% @collaborations.each do |collaboration| %>
-      <%= render 'collaboration', collaboration: collaboration %>
-      <% end %>
+      <%= render @collaborations %>
     </li>
   </ul>
 </div>
 
 </section>
-
-
-<%#= link_to '', new_material_path, class:'btn-round btn-new' %>
 
 <div class='btn-round btn-new'>
   <div class="btn-action"></div>

@@ -3,9 +3,9 @@ class UsersController < ApplicationController
   
   def index
   	if params[:search].present?
-      @users = User.where("lower(first_name) like ? OR lower(last_name) like ? OR lower(email) like ?", "%#{params[:search].downcase}%", "%#{params[:search].downcase}%", "%#{params[:search].downcase}%").order(:last_name)
+      @users = User.includes(:subject, :level).where("lower(first_name) like ? OR lower(last_name) like ? OR lower(email) like ?", "%#{params[:search].downcase}%", "%#{params[:search].downcase}%", "%#{params[:search].downcase}%").order(:last_name)
     else
-      @users = User.all
+      @users = User.all.includes(:subject, :level)
     end 
   end
 
@@ -15,9 +15,9 @@ class UsersController < ApplicationController
   def collaborate
     #@user_materials = UserMaterial.where(user_id: current_user.id)
     if params[:filter].present?
-      @users = User.where("lower(first_name) like ? OR lower(last_name) like ? OR lower(email) like ?", "%#{params[:filter].downcase}%", "%#{params[:filter].downcase}%", "%#{params[:filter].downcase}%").order(:last_name)
+      @users = User.includes(:subject, :level).where("lower(first_name) like ? OR lower(last_name) like ? OR lower(email) like ?", "%#{params[:filter].downcase}%", "%#{params[:filter].downcase}%", "%#{params[:filter].downcase}%").order(:last_name)
     else
-      @users = User.all
+      @users = User.includes(:subject, :level).all
     end 
   end
 
@@ -30,7 +30,7 @@ class UsersController < ApplicationController
   private
   # Never trust parameters from the scary internet, only allow the white list through.
   def user_params
-    params.require(:user).permit(:email, :first_name, :last_name, :subject_id, :level_id, :title_id)
+    params.require(:user).permit(:email, :first_name, :last_name, :subject_id, :level_id, :title_id, :id)
   end
 
   def set_user

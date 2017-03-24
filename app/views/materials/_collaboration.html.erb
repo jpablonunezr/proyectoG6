@@ -1,9 +1,9 @@
-<a href="<%= edit_material_path(collaboration.material) %>">
-<li id="materials_<%= collaboration.material.id %>">
-	<h2> <%= collaboration.material.title %></h2>
-	<p><%= collaboration.material.description %></p>
-	<div><%= link_to '', collaboration.material, method: :delete, data: { confirm: 'Seguro?' }, remote: true, class:'material-delete' %></div>
+<a href="<%= edit_material_path(collaboration) %>">
+<li id="materials_<%= collaboration.id %>">
+	<h2> <%= collaboration.title %></h2>
+	<p><%= collaboration.description %></p>
+	<div><%= link_to '', collaboration, method: :delete, data: { confirm: 'Seguro?' }, remote: true, class:'material-delete' %></div>
 
-	<div class="material-subject subject-<%= collaboration.material.subject.name %>"></div>
+	<div class="material-subject subject-<%= collaboration.subject.name %>"></div>
 </li>
 </a>
