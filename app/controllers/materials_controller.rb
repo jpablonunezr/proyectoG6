@@ -6,9 +6,8 @@ class MaterialsController < ApplicationController
   # GET /materials
   # GET /materials.json
   def index
-    @materials = current_user.user_materials.where(role: "owner").order('updated_at DESC')
-    @collaborations = current_user.user_materials.where(role: "collaborator").order('updated_at DESC')
-    # @materials= Material.order('created_at DESC')
+    @materials = Material.includes(:user_materials, :subject, :level).where(:user_materials => {role: "owner", user_id: current_user.id})
+    @collaborations = Material.includes(:user_materials, :subject, :level).where(:user_materials => {role: "collaborator", user_id: current_user.id})
     @material= Material.new
   end
 
@@ -23,7 +22,6 @@ class MaterialsController < ApplicationController
   # GET /materials/1
   # GET /materials/1.json
   def show
-
   end
 
   # GET /materials/new
@@ -38,12 +36,12 @@ class MaterialsController < ApplicationController
      @question = @material.questions.build()
      @question.alternatives.build
     end
-    @user_materials = UserMaterial.where(material_id: @material.id).order('updated_at DESC')
+    @comments = Comment.includes(:user_material)
   end
 
   def add_comment    
     @user_material = UserMaterial.find_by(material_id: params[:material_id], user_id: current_user.id)
-    a = @user_material.comments.build(content: params[:comment]).save
+    Comment.create(content: params[:comment], user_material_id: @user_material.id)
     redirect_to root_path    
   end
 

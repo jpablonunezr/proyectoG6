@@ -1,6 +1,5 @@
 <div class="cont-search-collaborate">
 
-
 <div class="btn-search">    
     <input type="text" name="buscador" placeholder="Buscar colaboradores..." autocomplete="off">
     <button></button>
@@ -9,9 +8,7 @@
 <center><%= collection_select(:id, :title, current_user.materials, :id, :title)%></div></center>
 <div class="cont-collaborators" id="user">
 <h2>Lista de usuarios</h2>
-    <% @users.each do |user| %>
-      <%= render 'collaborate', user: user %>
-    <% end %>
+  <%= render @users %>
 </div>
 
 <h2>Colaboradores del proyecto</h2>

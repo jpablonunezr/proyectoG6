@@ -1,0 +1,3 @@
+<div class="content"><%= comment.content %></div>
+	<% u = User.find(comment.user_material.user_id) %>
+<div class="author"><%= u.first_name %> <%= u.last_name %> - <%= comment.created_at.strftime("%d %b. %Y %H:%M") %></div>

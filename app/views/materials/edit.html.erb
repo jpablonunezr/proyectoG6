@@ -49,11 +49,7 @@
 
 		<%= form_tag(material_add_comment_path(@material), method: :get) do  %>
 		<div class="comment">
-
-			<% @user_materials.each do |umaterial|%>
-			<%= render 'comments', umaterial: umaterial %>				
-			<% end %>
-
+			<%= render @comments %>	
 		</div>
 			
 			<center><input type="text" name="comment" placeholder="Ingresar comentario..." autocomplete="off" maxlength="60" required="true"></center>
