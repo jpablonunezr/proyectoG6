@@ -40,3 +40,374 @@ Call stack
   /home/imadia/Documentos/proyectoG6/app/views/materials/all.html.erb:17:in `block in _app_views_materials_all_html_erb___1458369482914928978_69980821550840'
   /home/imadia/Documentos/proyectoG6/app/views/materials/all.html.erb:12:in `_app_views_materials_all_html_erb___1458369482914928978_69980821550840'
 
+2017-03-27 01:23:35[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:23:35[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:25:10[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:25:11[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:25:20[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:25:28[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:25:31[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:25:32[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:26:23[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:26:23[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:26:32[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:28:19[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:28:19[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:28:24[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:28:30[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:32:52[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:32:52[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:33:01[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:36:38[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:36:39[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:38:11[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:38:12[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:38:17[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:38:32[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:38:32[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:38:34[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:38:36[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:38:37[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:39:08[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:39:09[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:39:11[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:39:13[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:40:04[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:40:05[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:42:33[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:42:34[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:46:49[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:46:49[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:46:53[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:46:54[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:47:17[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:49:48[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:49:48[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:49:54[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:50:00[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:50:06[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:50:07[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:50:18[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:50:20[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:54:53[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:54:53[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:56:55[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 01:56:55[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+

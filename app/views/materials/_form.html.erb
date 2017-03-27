@@ -62,7 +62,7 @@
   <ul class="menu-material">
   <li class="btn-print" onClick="javascript:window.print();">Imprimir</li>
   <li class="btn-comments">Comentar</li>
-  <li class="btn-collaborate">Colaboradores</li>
+  <li class="btn-collaborate"><%= link_to "Colaboradores", collaborate_users_path(params[:id]) %></li>
     
   </ul>
 

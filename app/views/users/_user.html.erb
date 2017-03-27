@@ -1,4 +1,4 @@
-<a href="<%= user_path(user) %>">
+<a href="<%= users_path(user) %>">
 <section class="user-view">
     <div class="pic" style="background-image:url('<%= user.photo %>')"></div>
     <div class="name"><%= user.first_name %> <%= user.last_name %></div>    
@@ -7,6 +7,10 @@
         <div class="material-subject <%= user.subject.name %>"></div>
         <div class="level <%= user.level.name %>"></div> 
     </div>     
+    <div>
+    	<a href="<%= user_add_collaborate_path(params[:id], :user_id => user.id) %>">Agregar usuario</a>
+    	<a href="<%= user_del_collaborate_path(params[:id], :user_id => user.id) %>">Eliminar usuario</a>
+    </div>
 </section>
 </a> 
 
