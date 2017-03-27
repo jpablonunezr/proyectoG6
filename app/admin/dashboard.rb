@@ -10,6 +10,16 @@ ActiveAdmin.register_page "Dashboard" do
       end
     end
 
+
+    columns do
+      column do
+        panel "Recent Posts" do
+            render 'asdf'
+          end
+        end
+      end
+
+
     # Here is an example of a simple dashboard with columns and panels.
     #
     # columns do

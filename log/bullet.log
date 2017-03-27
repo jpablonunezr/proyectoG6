@@ -411,3 +411,31 @@ AVOID eager loading detected
   Remove from your finder: :includes => [:subject, :level, :user_materials]
 Call stack
 
+2017-03-27 11:06:36[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 11:06:36[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 11:06:58[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 11:07:00[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
