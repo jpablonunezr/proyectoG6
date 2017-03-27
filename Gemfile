@@ -15,6 +15,8 @@ gem 'carrierwave'
 gem 'fog'
 gem 'rollbar'
 gem 'oj', '~> 2.12.14'
+gem 'chartkick'
+gem 'dotenv-rails', :require => 'dotenv/rails-now'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -49,8 +51,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'dotenv-rails'
-
+  
 end
 
 group :development do

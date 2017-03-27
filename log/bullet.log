@@ -411,3 +411,85 @@ AVOID eager loading detected
   Remove from your finder: :includes => [:subject, :level, :user_materials]
 Call stack
 
+2017-03-27 11:06:36[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 11:06:36[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 11:06:58[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 11:07:00[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 15:29:03[WARN] user: pablo
+GET /admin/materials
+USE eager loading detected
+  Material => [:subject]
+  Add to your finder: :includes => [:subject]
+Call stack
+  /home/pablo/Escritorio/rails/proyectoG6/app/admin/material.rb:33:in `block (2 levels) in <top (required)>'
+
+2017-03-27 15:29:03[WARN] user: pablo
+GET /admin/materials
+USE eager loading detected
+  Material => [:level]
+  Add to your finder: :includes => [:level]
+Call stack
+  /home/pablo/Escritorio/rails/proyectoG6/app/admin/material.rb:34:in `block (2 levels) in <top (required)>'
+
+2017-03-27 15:36:10[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 15:36:17[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 15:58:21[WARN] user: pablo
+GET /materials/4/edit
+USE eager loading detected
+  Question => [:alternatives]
+  Add to your finder: :includes => [:alternatives]
+Call stack
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_question_fields.html.erb:8:in `_app_views_materials__question_fields_html_erb__2054524408514320638_69938963980300'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:44:in `block (2 levels) in _app_views_materials__form_html_erb___3422582555455363441_69938648498720'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:43:in `block in _app_views_materials__form_html_erb___3422582555455363441_69938648498720'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb___3422582555455363441_69938648498720'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___2747624197615308909_69938649170000'
+
+2017-03-27 15:58:36[WARN] user: pablo
+GET /materials/4/edit
+USE eager loading detected
+  Question => [:alternatives]
+  Add to your finder: :includes => [:alternatives]
+Call stack
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_question_fields.html.erb:8:in `_app_views_materials__question_fields_html_erb__2054524408514320638_69938976208060'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:44:in `block (2 levels) in _app_views_materials__form_html_erb___3422582555455363441_69938976508720'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:43:in `block in _app_views_materials__form_html_erb___3422582555455363441_69938976508720'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb___3422582555455363441_69938976508720'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___2747624197615308909_69938974857800'
+

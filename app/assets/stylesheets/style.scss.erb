@@ -1566,13 +1566,25 @@ header{
 
 	}
 
+	.comment-box{
+		position:relative;
+	}
+
 	input:focus,
 	input:hover{
 		background:$gray-lighter;
 	}
 
 	button{
-		opacity:0;
+		width:30px;
+		height:30px;
+		outline:0;
+		border:0;
+		border-radius:50%;
+		position:absolute;
+		top:calc(50% - 15px);
+		right:35px;
+		background:asset-url('check.svg') no-repeat center/15px $qui;
 	}
 
 	.close-comment{

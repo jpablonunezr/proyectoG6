@@ -1,0 +1,4 @@
+I, [2017-03-27T13:32:22.163890 #13923]  INFO -- : [Rollbar] Scheduling item
+I, [2017-03-27T13:32:22.163979 #13923]  INFO -- : [Rollbar] Sending item
+I, [2017-03-27T13:32:23.482291 #13923]  INFO -- : [Rollbar] Success
+I, [2017-03-27T13:32:23.482701 #13923]  INFO -- : [Rollbar] Details: https://rollbar.com/instance/uuid?uuid=f444bee1-7c3e-499e-9f81-271e5296a464 (only available if report was successful)

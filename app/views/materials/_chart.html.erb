@@ -1,0 +1,20 @@
+<div>
+<h3> Información por material </h3>
+	<%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
+	<% my_chart = Material.group('date(created_at)').count %>
+	<%= line_chart my_chart %>
+</div>
+<br>
+<div>
+	<h3> Información por asignatura </h3>
+	<%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
+	<% my_chart = Material.includes(:subject).group("subjects.name").pluck("subjects.name, count(subject_id)") %>
+	<%= column_chart my_chart %>
+</div>
+<br>
+<div>
+	<h3> Información por nivel </h3>
+	<%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
+	<% my_chart = Material.includes(:level).group("levels.name").pluck("levels.name, count(subject_id)") %>
+	<%= column_chart my_chart %>
+</div>
