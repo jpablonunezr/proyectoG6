@@ -12,6 +12,19 @@ ActiveAdmin.register Material do
 #   permitted
 # end
 
+
+permit_params :title, :description, :subject, :level, :updated_by, :public_level
+
+	form do |f|
+	    inputs "Crear material" do
+	        input :title
+	        input :description
+	        input :subject
+	        input :level
+		end
+	    actions
+	end
+
 	index do
 		column :title
 		column :description		

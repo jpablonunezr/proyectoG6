@@ -44,19 +44,35 @@
 <%= render 'question_fields', f: builder %>
 <% end %>
 
-
-<div class="btn-round btn-add-question">
-  <%= link_to_add_association "", f, :questions, title:'Agregar pregunta' %>
-</div> 
-
+  
+<div class="btn-round btn-add-question"><%= link_to_add_association "", f, :questions, title:'Agregar pregunta' %></div> 
 <%= f.submit '', class:'btn-round btn-save' %>
+
+  <div class="btn-round btn-fullscreen">
+    <div class="active-fullscreen"></div>
+    <div class="desactive-fullscreen"></div>
+  </div>
+
+  <div class="btn-round btn-menu">
+    <div class="active-menu"></div>
+    <div class="desactive-menu"></div>
+  </div>
+
+
+  <ul class="menu-material">
+  <li class="btn-print" onClick="javascript:window.print();">Imprimir</li>
+  <li class="btn-comments">Comentar</li>
+  <li class="btn-collaborate">Colaboradores</li>
+    
+  </ul>
+
+
 <% end %>
 
 <script type='text/javascript'>
 
   $('.btn-add-question').click(function() {
-    $("html, body").animate({ scrollTop: $(document).height() }, 400);
+    $("html, body").animate({ scrollTop: $(document).height() }, 800);
   });
-
 
 </script>

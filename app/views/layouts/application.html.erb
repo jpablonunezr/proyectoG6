@@ -3,6 +3,26 @@
 <head>
   <title>Proyecto G6</title>
   <%= csrf_meta_tags %>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+  <meta name="description" content="App para que ahorres tiempo administrativo" />
+  <meta name="keywords" content="Pruebas, profesores, herramientas, ayuda, test, examenes, materiales, asignaturas" />  
+  <meta name="author" content="TEACHUB" />
+  <meta name="googlebot" content="code">
+  <meta name="robots" content="index, follow">
+  <meta name="Copyright" content="Copyright (c)  teachub.cl  " />
+  <meta name="CONTACT_ADDR" content="contacto@teachub.cl" />
+  <meta property="og:url"             content="http://www.teachub.cl" />
+  <meta property="og:type"            content="website" />
+  <meta property="og:title"           content="Teachub" />
+  <meta property="og:description"     content="Ahorra tiempo creando materiales para tus clases" />   
+  <meta property="og:image"           content="http://i66.tinypic.com/nqpyxy.jpg"/>
+  <meta property="og:image:type"      content="image/jpg" /> 
+  <meta property="og:image:width"     content="1200" /> 
+  <meta property="og:image:height"    content="630" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#111">
+
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet"> 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -89,24 +109,10 @@ $('.btn-action-2').click(function() {
 
 </script>
 <script type='text/javascript'>
-  
-$('header .edit-profile').click(function() {
-    $('body').css({'overflow-x':'hidden'});
-    $('.acc').css({'height':'170px'});
-    $('.edit-content, .btn-upload').show(0); 
-    $('header').addClass('user-edit');    
-    $('.edit-content').addClass('edit-on');
-    $('main').addClass('main-edit-on');
-   $('.shadow-box-2').fadeIn(200);
-   $('.material').addClass('material-off');
-   $('.copy-right, .logout, .acc h4, .acc h5').addClass('footer-edit-on');  
-   $('.ifirst').focus(); 
-});
-  
+
 
 $(document).keyup(function(e) {
-if (e.keyCode == 27) {
-    $('header').removeClass('user-edit');    
+if (e.keyCode == 27) {  
     $('.acc').css({'height':'auto'});  
     $('.edit-content, .btn-upload').hide(0); 
     $('.edit-content').removeClass('edit-on');
@@ -121,7 +127,6 @@ if (e.keyCode == 27) {
 
 
 $('.shadow-box-2').click(function() {
-  $('header').removeClass('user-edit');
   $('.acc').css({'height':'auto'});  
   $('.edit-content').hide(0); 
   $('.edit-content').removeClass('edit-on');

@@ -1,23 +1,16 @@
 <div class="notice"><%= notice %></div>
 <div class="proyect-cont">
 	<%= render 'form', material: @material %>
-
-	<div class="btn-round btn-fullscreen">
-		<div class="active-fullscreen"></div>
-		<div class="desactive-fullscreen"></div>
-	</div>
-
-	<div class="btn-round btn-print" onClick="javascript:window.print();"></div>	
-	<div class="btn-round btn-comments"></div>
-	<div class="btn-round btn-collaborate"><a href="<%= collaborate_users_path %>"></a></div>
 </div>
+
 
 <% unless @material.updated_by.nil?  %>
 <section class="user-update">
 	<div class="pic" style="background-image:url('<%= User.find(@material.updated_by).photo %>')"></div>
 	<div class="firstname"><%= User.find(@material.updated_by).first_name %></div>
 	<div class="lastname"><%= User.find(@material.updated_by).last_name %></div>
-	<div class="time"><%= @material.updated_at %></div>
+	<div class="time"><%= @material.updated_at.strftime("%d %b. %Y %H:%M") %></div>
+
 </section>
 <% end %>
 
@@ -27,16 +20,18 @@
 		$('.desactive-fullscreen').show();
 		$(this).hide();
 		$('.btn-fullscreen').addClass('fullscreen-on');
-		$('main').css({'left': '0', 'width':'100vw'});
-		setTimeout( function(){	$('header').css({'transform': 'translate3d(-15vw,0,0)'});},100);
+		$('body').css({'background-color': '#bbb'});
+		setTimeout( function(){	$('header').css({'transform': 'translate3d(0,-80px,0)'});},100);
+		$('.nav-fix').css({'height': '0'});
 	});
 
 	$(".desactive-fullscreen").click(function(){
 		$(this).hide();		
 		$('.active-fullscreen').show()
 		$('.btn-fullscreen').removeClass('fullscreen-on');
-		$('main').css({'left': '15%', 'width':'85vw'});
+		$('body').css({'background-color': '#eee'});
 		setTimeout( function(){	$('header').css({'transform': 'translate3d(0,0,0)'});},100);
+		$('.nav-fix').css({'height': '80px'});
 	});
 
 
@@ -70,8 +65,35 @@
 
 </section>
 
+<script>
+$('textarea.js-auto-size').textareaAutoSize();
+</script>
+
+
 <script type='text/javascript'>
 	$(".btn-comments").click(function(){$('.comments-cont').css({'transform': 'translate3d(0,0,0)'});});
-	$(".close-comment").click(function(){$('.comments-cont').css({'transform': 'translate3d(600px,0,0)'});});
+	$(".close-comment").click(function(){$('.comments-cont').css({'transform': 'translate3d(605px,0,0)'});});
 
+
+	$(".active-menu").click(function(){
+		$(this).hide();
+		$('.btn-menu').addClass('menu-btn-on');
+		$('.menu-material, .desactive-menu').show();
+		 setTimeout( function(){
+			   $('.menu-material').addClass('menu-material-on');
+			},100);
+
+	});
+
+
+	$(".desactive-menu, .btn-comments,.btn-print, .btn-collaborate").click(function(){
+		$('.menu-material').removeClass('menu-material-on');
+		$('.btn-menu').removeClass('menu-btn-on');
+		$('.desactive-menu').hide();
+		$('.active-menu').show();
+		 setTimeout( function(){
+			   $('.menu-material').hide();
+			},100);
+
+	});
 </script>

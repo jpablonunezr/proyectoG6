@@ -1,7 +1,7 @@
 
 	<li class="nested-question nested-fields nested-cont">
 		<fieldset>
-		  <%= f.text_area :content, class:'question', placeholder:'Pregunta...' %>
+		  <%= f.text_area :content, class:'question js-auto-size', placeholder:'Pregunta...' %>
 		  <%#= f.check_box :_destroy %>
 		  <%= link_to_remove_association "", f, class:'question-delete' %>
 		  <%#= f.label :_destroy, "Eliminar" %>
@@ -14,6 +14,4 @@
 		</fieldset>
 
 	</li>
-
-
 

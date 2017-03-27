@@ -12,6 +12,17 @@ ActiveAdmin.register User do
 #   permitted
 # end
 
+permit_params :email, :password
+
+	form do |f|
+	    inputs "Agrega un usuario" do
+	        input :email
+	        input :password
+		end
+	    actions
+	end
+
+
 	index do
 		id_column
 		column :first_name

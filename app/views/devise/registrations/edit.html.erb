@@ -1,47 +1,97 @@
-<h2><%= current_user.first_name %> <%= current_user.last_name %></h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+<div class="edit-content user-edit">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, multipart: true }) do |f| %>
   <%= devise_error_messages! %>
 
- 
-    <%= f.label :nombre %><br />
-    <%= f.text_field :first_name, autofocus: true, autocomplete:false %><br />
+
+<h2>Edita tu perfil</h2>
+
+<%= f.file_field :photo %>
+<%= f.hidden_field :photo_cache %>
 
 
-    <%= f.label :email %><br />
-    <%= f.email_field :email %>
-  
-
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
+<section class="cont-names">
+  <div class="input-profile">
+    <%= f.text_field :first_name, autocomplete:false, class:'ifirst', required: true %>
+    <%= f.label :Nombre %>
   </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  <div class="input-profile">
+    <%= f.text_field :last_name, autocomplete:false, required: true %>
+    <%= f.label :Apellido %>
+  </div>
+</section>
+
+<section class="cont-names">
+  <div class="input-profile large">
+    <%= f.email_field :email , placeholder:'Email', autocomplete: 'off', required: true%> 
+    <%= f.label :email %>
+  </div>
+</section> 
+  <section class="cont-names">
+
+  <div class="input-profile">
+    <%= f.label :subject, "Asignatura" %>
+    <%= f.collection_select :subject_id, Subject.all, :id, :name %>
   </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
+  <div class="input-profile">
+    <%= f.label :level, "Nivel" %>
+    <%= f.collection_select :level_id, Level.all, :id, :name %>
   </div>
+</section>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
+<% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+<div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
 <% end %>
 
-<h3>Cancel my account</h3>
+<br>  
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-<%= link_to "Back", :back %>
+<section class="cont-names">
+  <div class="input-profile">
+      <%= f.password_field :password, autocomplete: "off"%>
+      <%= f.label :clave_nueva %>     
+        <% if @minimum_password_length %>
+  <em><%= @minimum_password_length %> carácteres mínimo</em>
+  <% end %>
+  </div>
+
+
+  <div class="input-profile">
+    <%= f.password_field :password_confirmation, autocomplete: "off"%>
+    <%= f.label :repita_clave %>
+  </div>
+</section>
+
+
+<div class="input-profile pwd-last">
+ <%= f.password_field :current_password, autocomplete: "off", required: true %>
+ <%= f.label :clave_actual %>
+</div>  
+
+<br>
+<br>
+
+
+<center>
+<button type="submit" class="btn-update">Actualizar</button>
+</center>
+<% end %>
+<center>
+<%= link_to 'Dar de baja mi cuenta', registration_path(resource_name), data: { confirm: "¿Estás seguro?" }, method: :delete, class:'delete-acc' %>
+</center>
+
+</div>
+
+<script type='text/javascript'>
+
+$('.msj').click(function() {
+    $(this).css({height:'0'});
+    $('.hidde-pwd').css({height:'60px'});
+     setTimeout( function(){
+    $('.hidde-pwd').addClass('pwd-show');
+  },100);  
+});
+    
+
+</script>

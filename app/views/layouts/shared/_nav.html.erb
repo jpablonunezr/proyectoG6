@@ -1,31 +1,35 @@
-<header><!-- EDIIIIIIIIIIIIT-->
-	<div class="logo" href="<%= root_path %>"></div>
+<header>
 	<% if user_signed_in? %>
 	<nav>
+
+		<form action="<%= users_path %>">
+			<div class="btn-search" style="z-index: 9999">    
+				<input type="text" name="search" placeholder="Buscar usuarios..." autocomplete="off">
+				<button></button>
+			</div>
+		</form>
+
+
+
+		<a class="logo" href="<%= root_path %>"></a>
 		<div class="acc">
 			<div class="img-profile" style="background-image:url(<%= current_user.photo %>)"></div>
-			<h4><%= current_user.first_name %> <%= current_user.last_name %></h4>
-			<h5><%= current_user.email %> </h5>
-			<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Cerrar sesión</a>			
+			<div class="date-acc">
+				<a href="<%=  edit_user_registration_path %>"><h4><%= current_user.first_name %> <%= current_user.last_name %></h4></a>
+				<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Cerrar sesión</a>	
+			</div>		
 		</div>
 
 		
-		<p class="copy-right">Todos los derechos reservados.<br>&copy; 2017 Teachub, y teachub.com son marcas registradas.</p>
+		<!--<p class="copy-right">Todos los derechos reservados.<br>&copy; 2017 Teachub, y teachub.com son marcas registradas.</p>
 		<div class="edit-profile">
 			<div></div><div></div><div></div>
-		</div>	
-	
+		</div>	-->
+
 
 	</nav>
-
-
-<%= render "devise/registrations/editparcial" %>
-
-
 	<% else %>
-
 	<nav></nav>
-
 	<% end %>
-
 </header>
+<div class="nav-fix"></div>
