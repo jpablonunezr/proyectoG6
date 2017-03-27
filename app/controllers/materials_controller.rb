@@ -38,7 +38,7 @@ class MaterialsController < ApplicationController
      @question = @material.questions.build()
      @question.alternatives.build
     end
-    @comments = Comment.includes(:user_material).reverse
+    @comments = Comment.includes(:user_material).where(:user_materials => {material_id: params[:id]}).reverse
   end
 
   def add_comment    

@@ -1,0 +1,106 @@
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ResourceController> at /home/imadia/.bundle/ruby/2.3.0/bundler/gems/activeadmin-c22973709cba/lib/active_admin/resource_controller.rb:62)
+Started GET "/materials" for 127.0.0.1 at 2017-03-27 16:08:27 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MaterialsController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/index.html.erb within layouts/application
+  [1m[35mSQL (1.0ms)[0m  [1m[34mSELECT "materials"."id" AS t0_r0, "materials"."title" AS t0_r1, "materials"."description" AS t0_r2, "materials"."created_at" AS t0_r3, "materials"."updated_at" AS t0_r4, "materials"."updated_by" AS t0_r5, "materials"."public_level" AS t0_r6, "materials"."subject_id" AS t0_r7, "materials"."level_id" AS t0_r8, "user_materials"."id" AS t1_r0, "user_materials"."role" AS t1_r1, "user_materials"."material_id" AS t1_r2, "user_materials"."user_id" AS t1_r3, "user_materials"."created_at" AS t1_r4, "user_materials"."updated_at" AS t1_r5, "subjects"."id" AS t2_r0, "subjects"."name" AS t2_r1, "subjects"."created_at" AS t2_r2, "subjects"."updated_at" AS t2_r3, "levels"."id" AS t3_r0, "levels"."name" AS t3_r1, "levels"."created_at" AS t3_r2, "levels"."updated_at" AS t3_r3 FROM "materials" LEFT OUTER JOIN "user_materials" ON "user_materials"."material_id" = "materials"."id" LEFT OUTER JOIN "subjects" ON "subjects"."id" = "materials"."subject_id" LEFT OUTER JOIN "levels" ON "levels"."id" = "materials"."level_id" WHERE "user_materials"."role" = $1 AND "user_materials"."user_id" = $2[0m  [["role", 3], ["user_id", 1]]
+  Rendered collection of materials/_material.html.erb [4 times] (4.0ms)
+  [1m[35mSQL (0.9ms)[0m  [1m[34mSELECT "materials"."id" AS t0_r0, "materials"."title" AS t0_r1, "materials"."description" AS t0_r2, "materials"."created_at" AS t0_r3, "materials"."updated_at" AS t0_r4, "materials"."updated_by" AS t0_r5, "materials"."public_level" AS t0_r6, "materials"."subject_id" AS t0_r7, "materials"."level_id" AS t0_r8, "user_materials"."id" AS t1_r0, "user_materials"."role" AS t1_r1, "user_materials"."material_id" AS t1_r2, "user_materials"."user_id" AS t1_r3, "user_materials"."created_at" AS t1_r4, "user_materials"."updated_at" AS t1_r5, "subjects"."id" AS t2_r0, "subjects"."name" AS t2_r1, "subjects"."created_at" AS t2_r2, "subjects"."updated_at" AS t2_r3, "levels"."id" AS t3_r0, "levels"."name" AS t3_r1, "levels"."created_at" AS t3_r2, "levels"."updated_at" AS t3_r3 FROM "materials" LEFT OUTER JOIN "user_materials" ON "user_materials"."material_id" = "materials"."id" LEFT OUTER JOIN "subjects" ON "subjects"."id" = "materials"."subject_id" LEFT OUTER JOIN "levels" ON "levels"."id" = "materials"."level_id" WHERE "user_materials"."role" = $1 AND "user_materials"."user_id" = $2[0m  [["role", 2], ["user_id", 1]]
+  Rendered collection of materials/_material.html.erb [2 times] (4.9ms)
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mLevel Load (0.3ms)[0m  [1m[34mSELECT "levels".* FROM "levels"[0m
+  Rendered materials/_pre_form.html.erb (17.4ms)
+  Rendered materials/index.html.erb within layouts/application (114.0ms)
+  Rendered layouts/shared/_nav.html.erb (2.2ms)
+Completed 200 OK in 2229ms (Views: 2161.5ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/materials/all?find=a" for 127.0.0.1 at 2017-03-27 16:08:34 -0300
+Processing by MaterialsController#all as HTML
+  Parameters: {"find"=>"a"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering materials/all.html.erb within layouts/application
+  [1m[36mMaterial Load (1.1ms)[0m  [1m[34mSELECT "materials".* FROM "materials" WHERE (lower(title) like '%a%' OR lower(description) like '%a%' AND public_level = 1)[0m
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects" WHERE "subjects"."id" IN (3, 10, 4, 9, 7, 5, 1)[0m
+  [1m[36mLevel Load (0.6ms)[0m  [1m[34mSELECT "levels".* FROM "levels" WHERE "levels"."id" IN (13, 4, 14, 3, 7, 9, 5, 11, 6, 1)[0m
+  Rendered materials/all.html.erb within layouts/application (45.2ms)
+  Rendered layouts/shared/_nav.html.erb (3.1ms)
+Completed 200 OK in 209ms (Views: 202.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/materials/28/edit" for 127.0.0.1 at 2017-03-27 16:08:39 -0300
+Processing by MaterialsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT  "materials".* FROM "materials" WHERE "materials"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mUserMaterial Load (0.5ms)[0m  [1m[34mSELECT  "user_materials".* FROM "user_materials" WHERE "user_materials"."material_id" = $1 AND "user_materials"."user_id" = $2 LIMIT $3[0m  [["material_id", 28], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "questions" WHERE "questions"."material_id" = $1 LIMIT $2[0m  [["material_id", 28], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[34mSELECT "comments"."id" AS t0_r0, "comments"."content" AS t0_r1, "comments"."user_material_id" AS t0_r2, "comments"."created_at" AS t0_r3, "comments"."updated_at" AS t0_r4, "user_materials"."id" AS t1_r0, "user_materials"."role" AS t1_r1, "user_materials"."material_id" AS t1_r2, "user_materials"."user_id" AS t1_r3, "user_materials"."created_at" AS t1_r4, "user_materials"."updated_at" AS t1_r5 FROM "comments" LEFT OUTER JOIN "user_materials" ON "user_materials"."id" = "comments"."user_material_id" WHERE "user_materials"."material_id" = $1[0m  [["material_id", 28]]
+  Rendering materials/edit.html.erb within layouts/application
+  [1m[36mSubject Load (0.4ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mLevel Load (0.3ms)[0m  [1m[34mSELECT "levels".* FROM "levels"[0m
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."material_id" = $1[0m  [["material_id", 28]]
+  [1m[36mAlternative Load (0.3ms)[0m  [1m[34mSELECT "alternatives".* FROM "alternatives" WHERE "alternatives"."question_id" = $1[0m  [["question_id", 36]]
+  Rendered materials/_alternative_fields.html.erb (1.0ms)
+  Rendered materials/_alternative_fields.html.erb (0.9ms)
+  Rendered materials/_question_fields.html.erb (27.5ms)
+  Rendered materials/_alternative_fields.html.erb (0.3ms)
+  Rendered materials/_question_fields.html.erb (6.1ms)
+  Rendered materials/_form.html.erb (73.3ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [3 times] (4.6ms)
+  Rendered materials/edit.html.erb within layouts/application (89.4ms)
+  Rendered layouts/shared/_nav.html.erb (2.1ms)
+Completed 200 OK in 304ms (Views: 238.0ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/materials/28/add_comment?utf8=%E2%9C%93&comment=adla%3Bdka%3Bdkad" for 127.0.0.1 at 2017-03-27 16:08:44 -0300
+Processing by MaterialsController#add_comment as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>"adla;dka;dkad", "material_id"=>"28"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUserMaterial Load (0.4ms)[0m  [1m[34mSELECT  "user_materials".* FROM "user_materials" WHERE "user_materials"."material_id" = $1 AND "user_materials"."user_id" = $2 LIMIT $3[0m  [["material_id", 28], ["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_material_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["content", "adla;dka;dkad"], ["user_material_id", 322], ["created_at", 2017-03-27 19:08:44 UTC], ["updated_at", 2017-03-27 19:08:44 UTC]]
+  [1m[35m (10.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/materials/28/edit
+Completed 302 Found in 21ms (ActiveRecord: 12.8ms)
+
+
+Started GET "/materials/28/edit" for 127.0.0.1 at 2017-03-27 16:08:44 -0300
+Processing by MaterialsController#edit as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT  "materials".* FROM "materials" WHERE "materials"."id" = $1 LIMIT $2[0m  [["id", 28], ["LIMIT", 1]]
+  [1m[36mUserMaterial Load (0.6ms)[0m  [1m[34mSELECT  "user_materials".* FROM "user_materials" WHERE "user_materials"."material_id" = $1 AND "user_materials"."user_id" = $2 LIMIT $3[0m  [["material_id", 28], ["user_id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "questions" WHERE "questions"."material_id" = $1 LIMIT $2[0m  [["material_id", 28], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[34mSELECT "comments"."id" AS t0_r0, "comments"."content" AS t0_r1, "comments"."user_material_id" AS t0_r2, "comments"."created_at" AS t0_r3, "comments"."updated_at" AS t0_r4, "user_materials"."id" AS t1_r0, "user_materials"."role" AS t1_r1, "user_materials"."material_id" AS t1_r2, "user_materials"."user_id" AS t1_r3, "user_materials"."created_at" AS t1_r4, "user_materials"."updated_at" AS t1_r5 FROM "comments" LEFT OUTER JOIN "user_materials" ON "user_materials"."id" = "comments"."user_material_id" WHERE "user_materials"."material_id" = $1[0m  [["material_id", 28]]
+  Rendering materials/edit.html.erb within layouts/application
+  [1m[36mSubject Load (0.3ms)[0m  [1m[34mSELECT "subjects".* FROM "subjects"[0m
+  [1m[36mLevel Load (0.4ms)[0m  [1m[34mSELECT "levels".* FROM "levels"[0m
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."material_id" = $1[0m  [["material_id", 28]]
+  [1m[36mAlternative Load (0.6ms)[0m  [1m[34mSELECT "alternatives".* FROM "alternatives" WHERE "alternatives"."question_id" = $1[0m  [["question_id", 36]]
+  Rendered materials/_alternative_fields.html.erb (2.4ms)
+  Rendered materials/_alternative_fields.html.erb (0.9ms)
+  Rendered materials/_question_fields.html.erb (18.4ms)
+  Rendered materials/_alternative_fields.html.erb (0.8ms)
+  Rendered materials/_question_fields.html.erb (7.3ms)
+  Rendered materials/_form.html.erb (45.5ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered collection of comments/_comment.html.erb [4 times] (13.2ms)
+  Rendered materials/edit.html.erb within layouts/application (70.5ms)
+  Rendered layouts/shared/_nav.html.erb (1.5ms)
+Completed 200 OK in 264ms (Views: 238.4ms | ActiveRecord: 5.0ms)
+
+
