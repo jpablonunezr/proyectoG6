@@ -439,3 +439,88 @@ AVOID eager loading detected
   Remove from your finder: :includes => [:subject, :level, :user_materials]
 Call stack
 
+2017-03-27 13:42:37[WARN] user: imadia
+GET /materials/26/edit
+USE eager loading detected
+  Question => [:alternatives]
+  Add to your finder: :includes => [:alternatives]
+Call stack
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_question_fields.html.erb:8:in `_app_views_materials__question_fields_html_erb__1928906564121222057_69839693099240'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:44:in `block (2 levels) in _app_views_materials__form_html_erb__2102543897581674988_69839693734160'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:43:in `block in _app_views_materials__form_html_erb__2102543897581674988_69839693734160'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb__2102543897581674988_69839693734160'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___3952685607161195075_69839693850100'
+
+2017-03-27 13:44:07[WARN] user: imadia
+GET /materials/26/edit
+USE eager loading detected
+  Question => [:alternatives]
+  Add to your finder: :includes => [:alternatives]
+Call stack
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_question_fields.html.erb:8:in `_app_views_materials__question_fields_html_erb__1928906564121222057_69839694674580'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:44:in `block (2 levels) in _app_views_materials__form_html_erb__2102543897581674988_69839664290840'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:43:in `block in _app_views_materials__form_html_erb__2102543897581674988_69839664290840'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb__2102543897581674988_69839664290840'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___3952685607161195075_69839665010320'
+
+2017-03-27 13:50:26[WARN] user: imadia
+GET /materials/26/edit
+USE eager loading detected
+  Question => [:alternatives]
+  Add to your finder: :includes => [:alternatives]
+Call stack
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_question_fields.html.erb:8:in `_app_views_materials__question_fields_html_erb__1928906564121222057_69839615156080'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:44:in `block (2 levels) in _app_views_materials__form_html_erb__2102543897581674988_69839660563860'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:43:in `block in _app_views_materials__form_html_erb__2102543897581674988_69839660563860'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb__2102543897581674988_69839660563860'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___3952685607161195075_69839662242560'
+
+2017-03-27 13:58:45[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 13:58:46[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 13:58:49[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 13:58:51[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 13:58:53[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 13:59:28[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 13:59:28[WARN] user: imadia
+GET /materials/28/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
