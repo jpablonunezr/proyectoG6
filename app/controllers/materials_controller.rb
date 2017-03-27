@@ -14,6 +14,8 @@ class MaterialsController < ApplicationController
   def all
     if params[:find].present?
       @materials = Material.includes(:subject, :level).where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%")
+    elsif(@materials.nil?)
+      @materials = Material.includes(:subject, :level).where(public_level: 1).order('updated_at DESC')      
     else
       @materials = Material.includes(:subject, :level).where(public_level: 1).order('updated_at DESC')
     end
@@ -36,13 +38,13 @@ class MaterialsController < ApplicationController
      @question = @material.questions.build()
      @question.alternatives.build
     end
-    @comments = Comment.includes(:user_material).where(:user_materials => {material_id: params[:id]})
+    @comments = Comment.includes(:user_material).where(:user_materials => {material_id: params[:id]}).reverse
   end
 
   def add_comment    
-    @user_material = UserMaterial.find_by(material_id: params[:material_id], user_id: current_user.id)
+    @user_material = UserMaterial.find_by(material_id: params[:material_id], user_id: current_user.id)    
     Comment.create(content: params[:comment], user_material_id: @user_material.id)
-    redirect_to root_path    
+    redirect_to edit_material_path(params[:material_id])
   end
 
   # POST /materials
@@ -52,7 +54,7 @@ class MaterialsController < ApplicationController
     @material.user_materials.build(role: 3, user_id: current_user.id)
     respond_to do |format|
       if @material.save
-        format.html { redirect_to edit_material_path(@material), notice: 'Material was successfully created.' }
+        format.html { redirect_to edit_material_path(@material) }
         format.json { render :show, status: :created, location: @material }
         format.js
       else

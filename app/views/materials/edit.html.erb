@@ -38,7 +38,7 @@
 </script>
 
 <section class="comments-cont">	  
-	<h2>Comentarios de <b><%= @material.title %></b></h2>
+	<h2>Cambios de <b><%= @material.title %></b></h2>
 
 	<div class="cont-comm">
 
@@ -46,9 +46,10 @@
 		<div class="comment">
 			<%= render @comments %>
 		</div>
-			
+			<div class="comment-box">
 			<center><input type="text" name="comment" placeholder="Ingresar comentario..." autocomplete="off" maxlength="60" required="true"></center>
-    		<button type="submit">Comentar</button>
+    		<button type="submit"></button>
+    		</div>
 		<% end %>
 	</div>
 
