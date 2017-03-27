@@ -7,9 +7,12 @@
         <div class="material-subject <%= user.subject.name %>"></div>
         <div class="level <%= user.level.name %>"></div> 
     </div>     
-    <div>
+    <div class="btns-actions"><!-- 
     	<a href="<%= user_add_collaborate_path(params[:id], :user_id => user.id) %>">Agregar usuario</a>
     	<a href="<%= user_del_collaborate_path(params[:id], :user_id => user.id) %>">Eliminar usuario</a>
+         -->
+    <a href="<%= user_add_collaborate_path(params[:id], :user_id => user.id) %>"><div class="add"></div></a>
+    <a href="<%= user_del_collaborate_path(params[:id], :user_id => user.id) %"><div class="delete"></div></a>
     </div>
 </section>
 </a> 

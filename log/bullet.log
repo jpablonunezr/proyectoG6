@@ -493,3 +493,596 @@ Call stack
   /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb___3422582555455363441_69938976508720'
   /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___2747624197615308909_69938974857800'
 
+2017-03-27 16:25:06[WARN] user: pablo
+GET /materials/4/edit
+USE eager loading detected
+  Question => [:alternatives]
+  Add to your finder: :includes => [:alternatives]
+Call stack
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_question_fields.html.erb:8:in `_app_views_materials__question_fields_html_erb__3672270415047405472_70356834071260'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:44:in `block (2 levels) in _app_views_materials__form_html_erb___4084981325486047383_47167340'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:43:in `block in _app_views_materials__form_html_erb___4084981325486047383_47167340'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb___4084981325486047383_47167340'
+  /home/pablo/Escritorio/rails/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___686751312524414535_48100100'
+
+2017-03-27 16:25:23[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:25:23[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:26:10[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:26:12[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:26:27[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:26:28[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:27:37[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:27:38[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:27:39[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:28:26[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:28:27[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:28:30[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:30:32[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:30:33[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:30:37[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:33:41[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:33:42[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:33:48[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:33:49[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:34:17[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:34:18[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:34:51[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:34:52[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:35:19[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:35:20[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:35:34[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:35:35[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:35:59[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:36:00[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:37:12[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:37:13[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:38:12[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:38:13[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:38:26[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:38:26[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:38:42[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:38:43[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:40:21[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:40:22[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:40:33[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:40:34[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:40:47[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:40:48[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:41:28[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:41:29[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:42:05[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:42:06[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:42:18[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:42:19[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:42:37[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:42:38[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:42:57[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:42:58[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:43:43[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:43:44[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:43:54[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:43:55[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:08[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:09[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:14[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:15[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:25[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:26[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:31[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:31[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:32[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:47[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:44:48[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:45:50[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:45:51[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:46:06[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:46:07[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:46:13[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:46:14[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:48:23[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:48:25[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:48:39[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:48:40[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:48:57[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:49:18[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:49:19[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:49:24[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+
+2017-03-27 16:49:25[WARN] user: pablo
+GET /materials/4/users/collaborate
+AVOID eager loading detected
+  User => [:subject, :level, :user_materials]
+  Remove from your finder: :includes => [:subject, :level, :user_materials]
+Call stack
+

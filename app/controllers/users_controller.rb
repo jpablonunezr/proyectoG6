@@ -26,9 +26,9 @@ class UsersController < ApplicationController
     @user_material = UserMaterial.where(user_id: params[:user_id], material_id: params[:id], role: "collaborator")
     if @user_material.empty?
       UserMaterial.create(material_id: params[:id], user_id: params[:user_id], role: "collaborator")
-      redirect_to collaborate_users_path, notice: 'Collaborator was successfully updated.'
+      redirect_to collaborate_users_path, notice: 'Se añadió un colaborador.'
     else
-      redirect_to collaborate_users_path, notice: 'User is already collaborator.'
+      redirect_to collaborate_users_path, notice: 'El colaborador ya fue añadido.'
     end
   end
 

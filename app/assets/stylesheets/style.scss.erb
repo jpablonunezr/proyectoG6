@@ -1634,20 +1634,14 @@ header{
 		}
 
 	}
-
-
-
-
-
+	
 
 }
 
 
 .cont-search-collaborate{
-	background:$main;
 	padding:50px;
 	box-sizing:border-box;
-	box-shadow:$shadow-soft;
 	height:auto;
 	min-height:auto;
 	transition:$transition-2;
@@ -1656,7 +1650,7 @@ header{
 		width:100%;
 		text-align:center;
 		font-size:35px;
-		color:#fff;
+		color:$text-dark;
 		margin:0px 0 30px 0;
 	}
 
@@ -1917,13 +1911,136 @@ textarea {
 
 
 
+.table-materials{
+	width:100%;	
+
+	thead{
+		height:60px;
+	}
+
+	tbody{
+
+		tr{
+		background:#fff;
+		border-bottom:8px solid #eee;
+
+			td{
+			padding:10px 20px;
+			}
+
+			td:nth-child(1){
+				font-weight:bold;
+			}
 
 
 
 
+		}
+
+	}
+
+	.material-subject,
+	.level{
+		position:relative;
+		font-size:10px;
+		font-weight:bold;
+		text-transform:uppercase;
+		color:#fff;
+		width:40px;
+		height:18px;
+		background:#999;
+		border-radius:3px;
+		margin:10px 2px;
+	}
+
+	.material-subject::after,
+	.level::after{
+		content:'';					
+		width:100%;
+		height:100%;
+		line-height:19px;
+		position:absolute;
+		left:0;
+		top:0;
+		text-align:center;
+	}
+
+
+	.No::after{content:'N/A'}
+	.Lenguaje::after{content:'len'}
+	.Matemática::after{content:'mat'}
+	.Historia::after{content:'his'}
+	.Ciencias::after{content:'cie'}
+	.Química::after{content:'qui'}			
+	.Biología::after{content:'bio'}			
+	.Física::after{content:'fis'}				
+	.Ingles::after{content:'ing'}				
+	.Religión::after{content:'rel'}
+	.Psicología::after{content:'psi'}
+	.Medio::after{content:'med'}
+	.Básico::after{content:'bas'}
+
+
+	.Lenguaje{background-color:$len;}
+	.Matemática{background-color:$mat;}
+	.Historia{background-color:$his;}
+	.Ciencias{background-color:$cie;}
+	.Química{background-color:$qui;}				
+	.Biología{background-color:$bio;}				
+	.Física{background-color:$fis;}				
+	.Ingles{background-color:$ing;}				
+	.Religión{background-color:$rel;}
+	.Psicología{background-color:$psi;}
 
 
 
+}
+
+
+
+
+.btns-actions{
+	width:20px;
+	position:absolute;
+	top:10px;
+	height:100px;
+	right:10px;
+
+	div{
+		text-align:center;
+		width:100%;
+		height:20px;
+		margin:0 0 7px 0;
+		border-radius:50%;
+		font-size:9px;
+		display:block;
+		text-transform:uppercase;
+		color:#fff;
+		transition:$transition-2;
+		opacity:0;
+		transform:translate3d(5px,0,0);
+
+
+	
+	}
+
+		div.add{background:asset-url('add.svg') no-repeat center/10px $qui;
+
+		} 
+
+		div.delete{
+			background:asset-url('delete.svg') no-repeat center/8px $main;
+			transition-delay:.2s;
+
+		} 
+}
+
+
+.user-view:hover div{
+	opacity:1;
+	transform:translate3d(0,0,0);
+
+}
 
 
 
