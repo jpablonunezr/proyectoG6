@@ -5,8 +5,30 @@
 
 <h2>Edita tu perfil</h2>
 
-<%= f.file_field :photo %>
-<%= f.hidden_field :photo_cache %>
+
+
+
+<div class="photo-frame" style="background-image:url('<%= current_user.photo %>"')>
+  <%= f.file_field :photo, onchange:'readURL(this);' %>
+  <img id="img_prev" src="#" />
+</div>
+
+  <script>
+      function readURL(input) {
+        if (input.files && input.files[0]) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            $('#img_prev')
+              .attr('src', e.target.result)
+            $('.photo-frame').addClass('frame-on')
+          };
+
+          reader.readAsDataURL(input.files[0]);
+        }
+      }
+    </script>
+
 
 
 <section class="cont-names">

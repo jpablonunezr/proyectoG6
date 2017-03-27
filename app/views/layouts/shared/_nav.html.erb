@@ -13,7 +13,7 @@
 
 		<a class="logo" href="<%= root_path %>"></a>
 		<div class="acc">
-			<div class="img-profile" style="background-image:url(<%= current_user.photo %>)"></div>
+			<a href="<%=  edit_user_registration_path %>"><div class="img-profile" style="background-image:url(<%= current_user.photo %>)"></div></a>
 			<div class="date-acc">
 				<a href="<%=  edit_user_registration_path %>"><h4><%= current_user.first_name %> <%= current_user.last_name %></h4></a>
 				<a href="<%= destroy_user_session_path  %>" data-method="delete" class="logout">Cerrar sesión</a>	
