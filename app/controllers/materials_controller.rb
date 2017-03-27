@@ -13,9 +13,9 @@ class MaterialsController < ApplicationController
 
   def all
     if params[:find].present?
-      @materials = Material.where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%")
+      @materials = Material.includes(:subject, :level).where("lower(title) like ? OR lower(description) like ? AND public_level = 1", "%#{params[:find].downcase}%", "%#{params[:find].downcase}%")
     else
-      @materials = Material.where(public_level: 1).order('updated_at DESC')
+      @materials = Material.includes(:subject, :level).where(public_level: 1).order('updated_at DESC')
     end
   end
 

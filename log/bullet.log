@@ -1,0 +1,42 @@
+2017-03-26 23:36:08[WARN] user: imadia
+GET /materials/26/edit
+USE eager loading detected
+  Question => [:alternatives]
+  Add to your finder: :includes => [:alternatives]
+Call stack
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_question_fields.html.erb:8:in `_app_views_materials__question_fields_html_erb___632673411823915439_70257177252900'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:44:in `block (2 levels) in _app_views_materials__form_html_erb___610112105339520757_70257176501900'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:43:in `block in _app_views_materials__form_html_erb___610112105339520757_70257176501900'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb___610112105339520757_70257176501900'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___2228903289545708122_70257176363700'
+
+2017-03-26 23:36:09[WARN] user: imadia
+GET /materials/26/edit
+USE eager loading detected
+  Question => [:alternatives]
+  Add to your finder: :includes => [:alternatives]
+Call stack
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_question_fields.html.erb:8:in `_app_views_materials__question_fields_html_erb___632673411823915439_70257048777860'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:44:in `block (2 levels) in _app_views_materials__form_html_erb___610112105339520757_70257175945720'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:43:in `block in _app_views_materials__form_html_erb___610112105339520757_70257175945720'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/_form.html.erb:1:in `_app_views_materials__form_html_erb___610112105339520757_70257175945720'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/edit.html.erb:3:in `_app_views_materials_edit_html_erb___2228903289545708122_70257176080080'
+
+2017-03-26 23:41:30[WARN] user: imadia
+GET /materials/all?find=
+USE eager loading detected
+  Material => [:subject]
+  Add to your finder: :includes => [:subject]
+Call stack
+  /home/imadia/Documentos/proyectoG6/app/views/materials/all.html.erb:16:in `block in _app_views_materials_all_html_erb___1458369482914928978_69980821550840'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/all.html.erb:12:in `_app_views_materials_all_html_erb___1458369482914928978_69980821550840'
+
+2017-03-26 23:41:30[WARN] user: imadia
+GET /materials/all?find=
+USE eager loading detected
+  Material => [:level]
+  Add to your finder: :includes => [:level]
+Call stack
+  /home/imadia/Documentos/proyectoG6/app/views/materials/all.html.erb:17:in `block in _app_views_materials_all_html_erb___1458369482914928978_69980821550840'
+  /home/imadia/Documentos/proyectoG6/app/views/materials/all.html.erb:12:in `_app_views_materials_all_html_erb___1458369482914928978_69980821550840'
+
